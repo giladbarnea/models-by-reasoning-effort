@@ -1,0 +1,581 @@
+{
+ "scores": {
+  "AA Intelligence Index": {
+   "Haiku 5.5": [
+    null,
+    29.4,
+    34.5,
+    37.8,
+    41.2,
+    43.4
+   ]
+  },
+  "Humanity's Last Exam": {
+   "Haiku 5.5": [
+    null,
+    27.0,
+    33.8,
+    37.3,
+    42.7,
+    44.4
+   ]
+  },
+  "CritPt": {
+   "Haiku 5.5": [
+    null,
+    9.1,
+    12.9,
+    18.6,
+    22.6,
+    18.9
+   ]
+  },
+  "AA-Omniscience Index": {
+   "Haiku 5.5": [
+    null,
+    3.2,
+    4.5,
+    5.8,
+    6.0,
+    10.7
+   ]
+  },
+  "GDPval-AA": {
+   "Haiku 5.5": [
+    null,
+    1125,
+    1277,
+    1420,
+    1511,
+    1620
+   ]
+  },
+  "AutomationBench-AA": {
+   "Haiku 5.5": [
+    null,
+    22.9,
+    28.6,
+    33.7,
+    36.0,
+    35.4
+   ]
+  },
+  "AA-LCR": {
+   "Haiku 5.5": [
+    null,
+    72.0,
+    77.3,
+    77.3,
+    78.3,
+    82.7
+   ]
+  },
+  "Terminal-Bench 4.0": {
+   "Haiku 5.5": [
+    null,
+    12.6,
+    15.2,
+    21.7,
+    29.3,
+    32.8
+   ]
+  },
+  "Terminal-Bench 2.1": {
+   "Haiku 5.5": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  "SciCode": {
+   "Haiku 5.5": [
+    null,
+    49.2,
+    49.0,
+    48.7,
+    51.7,
+    55.0
+   ]
+  },
+  "AA Index coding category": {
+   "Haiku 5.5": [
+    null,
+    30.9,
+    32.1,
+    35.2,
+    40.5,
+    43.9
+   ]
+  },
+  "ARC-AGI-2": {
+   "Haiku 5.5": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  "AA-Briefcase": {
+   "GPT-5.6 Sol": [
+    1009,
+    1043,
+    1242,
+    1368,
+    1438,
+    1478
+   ],
+   "GPT-6 Astra": [
+    null,
+    1261,
+    1459,
+    1507,
+    1544,
+    1569
+   ],
+   "GPT-6 Sol": [
+    1104,
+    886,
+    1150,
+    1268,
+    1359,
+    1479
+   ],
+   "Fable 5.1": [
+    null,
+    1482,
+    1529,
+    1581,
+    1656,
+    1675
+   ],
+   "Opus 5.5": [
+    null,
+    1280,
+    1628,
+    1689,
+    1768,
+    1807
+   ],
+   "GPT-6.1 Sol": [
+    null,
+    1118,
+    1365,
+    1471,
+    1507,
+    1564
+   ],
+   "Sonnet 5.5": [
+    null,
+    1272,
+    1442,
+    1639,
+    1751,
+    1823
+   ],
+   "Haiku 5.5": [
+    null,
+    1112,
+    1372,
+    1443,
+    1533,
+    1578
+   ]
+  },
+  "GDP.pdf": {
+   "GPT-5.6 Sol": [
+    15.2,
+    21.0,
+    26.2,
+    27.8,
+    27.6,
+    27.2
+   ],
+   "GPT-6 Astra": [
+    null,
+    30.4,
+    30.4,
+    31.0,
+    32.2,
+    31.0
+   ],
+   "GPT-6 Sol": [
+    17.0,
+    24.2,
+    23.8,
+    24.4,
+    24.6,
+    25.2
+   ],
+   "Fable 5.1": [
+    null,
+    28.0,
+    26.8,
+    26.8,
+    26.2,
+    26.2
+   ],
+   "Opus 5.5": [
+    null,
+    25.6,
+    25.6,
+    28.8,
+    26.6,
+    26.2
+   ],
+   "GPT-6.1 Sol": [
+    null,
+    27.0,
+    30.0,
+    32.0,
+    31.8,
+    31.0
+   ],
+   "Sonnet 5.5": [
+    null,
+    16.0,
+    20.2,
+    25.2,
+    24.6,
+    25.8
+   ],
+   "Haiku 5.5": [
+    null,
+    11.2,
+    15.2,
+    17.2,
+    18.2,
+    20.8
+   ]
+  }
+ },
+ "costs": {
+  "AA Intelligence Index": {
+   "Haiku 5.5": [
+    null,
+    34.3,
+    56.4,
+    94.1,
+    158.0,
+    330.0
+   ]
+  },
+  "Humanity's Last Exam": {
+   "Haiku 5.5": [
+    null,
+    0.00189,
+    0.00348,
+    0.00848,
+    0.0191,
+    0.0439
+   ]
+  },
+  "CritPt": {
+   "Haiku 5.5": [
+    null,
+    0.00731,
+    0.0136,
+    0.0327,
+    0.0651,
+    0.0935
+   ]
+  },
+  "AA-Omniscience Index": {
+   "Haiku 5.5": [
+    null,
+    0.000266,
+    0.00033,
+    0.000439,
+    0.000787,
+    0.00626
+   ]
+  },
+  "GDPval-AA": {
+   "Haiku 5.5": [
+    null,
+    0.0104,
+    0.0207,
+    0.0436,
+    0.0921,
+    0.222
+   ]
+  },
+  "AutomationBench-AA": {
+   "Haiku 5.5": [
+    null,
+    0.0153,
+    0.0191,
+    0.0227,
+    0.0276,
+    0.0423
+   ]
+  },
+  "AA-LCR": {
+   "Haiku 5.5": [
+    null,
+    0.0148,
+    0.0149,
+    0.015,
+    0.0153,
+    0.0193
+   ]
+  },
+  "Terminal-Bench 4.0": {
+   "Haiku 5.5": [
+    null,
+    0.119,
+    0.194,
+    0.331,
+    0.46,
+    0.652
+   ]
+  },
+  "SciCode": {
+   "Haiku 5.5": [
+    null,
+    0.00095,
+    0.00117,
+    0.0015,
+    0.00268,
+    0.0109
+   ]
+  },
+  "AA Index coding category": {
+   "Haiku 5.5": [
+    null,
+    0.0598,
+    0.0975,
+    0.166,
+    0.231,
+    0.331
+   ]
+  },
+  "ARC-AGI-2": {
+   "Haiku 5.5": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  "AA-Briefcase": {
+   "GPT-5.6 Sol": [
+    null,
+    0.419,
+    0.968,
+    2.06,
+    3.08,
+    4.02
+   ],
+   "GPT-6 Astra": [
+    null,
+    1.44,
+    3.94,
+    4.76,
+    6.56,
+    9.5
+   ],
+   "GPT-6 Sol": [
+    0.374,
+    0.127,
+    0.33,
+    0.639,
+    1.13,
+    2.62
+   ],
+   "Fable 5.1": [
+    null,
+    6.72,
+    8.58,
+    11.4,
+    17.8,
+    22.7
+   ],
+   "Opus 5.5": [
+    null,
+    1.15,
+    4.4,
+    6.27,
+    12.3,
+    21.0
+   ],
+   "GPT-6.1 Sol": [
+    null,
+    0.177,
+    0.464,
+    0.837,
+    1.04,
+    2.31
+   ],
+   "Sonnet 5.5": [
+    null,
+    0.802,
+    1.39,
+    3.27,
+    6.98,
+    20.5
+   ],
+   "Haiku 5.5": [
+    null,
+    0.0472,
+    0.133,
+    0.223,
+    0.366,
+    0.675
+   ]
+  },
+  "GDP.pdf": {
+   "GPT-5.6 Sol": [
+    null,
+    0.63,
+    0.653,
+    0.7,
+    0.782,
+    0.929
+   ],
+   "GPT-6 Astra": [
+    null,
+    1.7,
+    1.72,
+    1.79,
+    1.91,
+    2.08
+   ],
+   "GPT-6 Sol": [
+    0.329,
+    0.331,
+    0.337,
+    0.348,
+    0.37,
+    0.425
+   ],
+   "Fable 5.1": [
+    null,
+    1.92,
+    1.96,
+    2.02,
+    2.32,
+    2.77
+   ],
+   "Opus 5.5": [
+    null,
+    0.764,
+    0.795,
+    0.825,
+    0.964,
+    1.55
+   ],
+   "GPT-6.1 Sol": [
+    null,
+    0.334,
+    0.337,
+    0.349,
+    0.368,
+    0.42
+   ],
+   "Sonnet 5.5": [
+    null,
+    0.372,
+    0.381,
+    0.409,
+    0.46,
+    0.794
+   ],
+   "Haiku 5.5": [
+    null,
+    0.0193,
+    0.0206,
+    0.0226,
+    0.0273,
+    0.0527
+   ]
+  },
+  "AA-Briefcase total (US$, whole eval)": {
+   "GPT-5.6 Sol": [
+    41.9,
+    38.1,
+    88.1,
+    188.0,
+    280.0,
+    366.0
+   ],
+   "GPT-6 Astra": [
+    null,
+    131.0,
+    359.0,
+    433.0,
+    597.0,
+    865.0
+   ],
+   "GPT-6 Sol": [
+    34.0,
+    11.6,
+    30.1,
+    58.2,
+    103.0,
+    239.0
+   ],
+   "Fable 5.1": [
+    null,
+    612.0,
+    781.0,
+    1040.0,
+    1620.0,
+    2070.0
+   ],
+   "Opus 5.5": [
+    null,
+    105.0,
+    400.0,
+    571.0,
+    1120.0,
+    1920.0
+   ],
+   "GPT-6.1 Sol": [
+    null,
+    16.1,
+    42.3,
+    76.2,
+    94.5,
+    210.0
+   ],
+   "Sonnet 5.5": [
+    null,
+    73.0,
+    127.0,
+    298.0,
+    635.0,
+    1860.0
+   ],
+   "Haiku 5.5": [
+    null,
+    4.3,
+    12.1,
+    20.3,
+    33.3,
+    61.4
+   ]
+  }
+ },
+ "estimated": [
+  [
+   "GPT-5.6 Sol",
+   "off"
+  ]
+ ],
+ "notes": {
+  "all": "Fetched 2026-10-08 from artificialanalysis.ai/models/claude-haiku-5-5 (+ the other model pages fetched 2026-10-07) and arcprize.org v2.json.",
+  "Haiku 5.5 levels": "low, medium, high, xhigh, max (AA names them 'Default Fallback'). No off / non-reasoning variant on AA. Intelligence Index not flagged estimated at any level.",
+  "ARC-AGI-2": "Haiku 5.5 is not on the ARC Prize v2 leaderboard yet.",
+  "Terminal-Bench 2.1": "AA has not run Haiku 5.5 on TB 2.1.",
+  "AA-Briefcase": "Score = briefcaseBreakdown.overall.elo, rounded to integer. Elo, relative: shifts as AA adds models. Cost = costPerTask of the 'aa-briefcase' evaluation. AA also gives a whole-eval total (briefcaseTotalCost), included as a separate cost entry.",
+  "GDP.pdf": "Score = gdpPdfAllPass \u00d7 100, % of tasks passing all checks. Cost = costPerTask of the 'gdp-pdf' evaluation.",
+  "GPT-5.6 Sol off": "AA's non-reasoning record has no per-evaluation list (its Intelligence Index is estimated), so per-task costs at off are None; Briefcase and GDP.pdf scores and the Briefcase total cost exist."
+ }
+}

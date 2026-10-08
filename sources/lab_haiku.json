@@ -1,0 +1,61 @@
+{
+ "per_level": {
+  "FrontierCode 1.1 Main": {
+   "unit_and_source": "score · Cognition leaderboard",
+   "section": "Coding",
+   "scores": {
+    "Haiku 5.5": [
+     null,
+     34.8,
+     41.6,
+     41.9,
+     45.8,
+     46.4
+    ]
+   }
+  },
+  "CursorBench 4.0": {
+   "unit_and_source": "% · Cursor leaderboard",
+   "section": "Coding",
+   "scores": {
+    "Haiku 5.5": [
+     null,
+     30.9,
+     36.9,
+     42.3,
+     44.3,
+     48.4
+    ]
+   }
+  }
+ },
+ "single": {
+  "SWE-Bench Pro": {
+   "unit_and_source": "% resolved · each lab’s own run on its own agent harness",
+   "section": "Coding",
+   "scores": {
+    "Haiku 5.5": [
+     64.8,
+     "max"
+    ]
+   }
+  }
+ },
+ "notes": {
+  "sources": {
+   "Cognition FrontierCode data": "https://cognition.com/data/frontiercode-leaderboard/data.json",
+   "Cursor CursorBench 4.0 leaderboard": "https://cursor.com/en/cursorbench",
+   "Anthropic Haiku 5.5 page": "https://www.anthropic.com/claude-haiku-5-5",
+   "Anthropic Haiku 5.5 system card": "https://www.anthropic.com/claude-haiku-5-5-system-card",
+   "DeepSWE live leaderboard": "https://deepswe.datacurve.ai/artifacts/v1/leaderboard-live.json"
+  },
+  "fetched": "2026-10-08",
+  "FrontierCode 1.1 Main": "Cognition data.json, Main set, field new_score. Confirmed by Anthropic: system card §8.3 and the launch-page grid give 46.4% Main at max (best level), 58.4% Extended.",
+  "CursorBench 4.0": "Cursor's public leaderboard, 5 levels. Not on Anthropic's Haiku page or system card.",
+  "SWE-Bench Pro": "System card §8.2: 64.8%, 5-trial average, standard config = max effort.",
+  "DeepSWE v1.1": "No Haiku 5.5 value anywhere: not on the DeepSWE live leaderboard (only Haiku 4.5), not in the system card or launch page.",
+  "AA Coding Agent Index": "No v1.4 per-level data. AA's live coding-agent index lists two Haiku 5.5 agent rows (28.2 and 41.4), live version, effort not stated, so not comparable to v1.4.",
+  "LiveCodeBench": "Vals AI page last updated 2026-09-01, before Haiku 5.5's 2026-10-07 release. No value.",
+  "Haiku 5.5 launch page, other per-level charts (Haiku only, low..max)": "OSWorld 2.1 offline subset 42.0, 53.3, 61.3, 67.6, 72.4; GDPval-AA v2.1 1125, 1277, 1420, 1513, 1620; HLE no tools 30.9, 35.5, 39.7, 44.1, 45.9; Terminal-Bench 4.0 12.7, 20.3, 24.8, 31.5, 39.2 (Anthropic's own runs; AA values may differ). Grid also gives AA-Briefcase v1.1 1578 and Chartography (no tools) 46.4% at max."
+ }
+}

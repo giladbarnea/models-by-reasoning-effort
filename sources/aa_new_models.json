@@ -1,0 +1,667 @@
+{
+ "scores": {
+  "AA Intelligence Index": {
+   "GPT-6.1 Sol": [
+    null,
+    42.1,
+    47.8,
+    50.2,
+    51.0,
+    51.8
+   ],
+   "Sonnet 5.5": [
+    null,
+    35.9,
+    40.8,
+    46.8,
+    51.9,
+    56.0
+   ]
+  },
+  "Humanity's Last Exam": {
+   "GPT-6.1 Sol": [
+    null,
+    47.4,
+    49.9,
+    51.4,
+    52.6,
+    52.9
+   ],
+   "Sonnet 5.5": [
+    null,
+    36.2,
+    39.8,
+    45.8,
+    50.0,
+    55.0
+   ]
+  },
+  "CritPt": {
+   "GPT-6.1 Sol": [
+    null,
+    24.9,
+    27.7,
+    30.0,
+    31.7,
+    31.7
+   ],
+   "Sonnet 5.5": [
+    null,
+    11.4,
+    16.9,
+    24.6,
+    31.1,
+    31.4
+   ]
+  },
+  "AA-Omniscience Index": {
+   "GPT-6.1 Sol": [
+    null,
+    37.6,
+    40.0,
+    41.5,
+    40.9,
+    41.5
+   ],
+   "Sonnet 5.5": [
+    null,
+    19.4,
+    20.1,
+    20.9,
+    23.5,
+    32.3
+   ]
+  },
+  "GDPval-AA": {
+   "GPT-6.1 Sol": [
+    null,
+    1297,
+    1433,
+    1486,
+    1510,
+    1575
+   ],
+   "Sonnet 5.5": [
+    null,
+    1179,
+    1324,
+    1551,
+    1731,
+    1839
+   ]
+  },
+  "AutomationBench-AA": {
+   "GPT-6.1 Sol": [
+    null,
+    52.6,
+    62.6,
+    64.5,
+    66.6,
+    64.9
+   ],
+   "Sonnet 5.5": [
+    null,
+    49.4,
+    54.9,
+    59.4,
+    65.5,
+    71.8
+   ]
+  },
+  "AA-LCR": {
+   "GPT-6.1 Sol": [
+    null,
+    84.0,
+    83.3,
+    82.3,
+    79.7,
+    83.0
+   ],
+   "Sonnet 5.5": [
+    null,
+    76.0,
+    76.3,
+    78.0,
+    79.7,
+    82.7
+   ]
+  },
+  "Terminal-Bench 4.0": {
+   "GPT-6.1 Sol": [
+    null,
+    30.8,
+    48.0,
+    51.5,
+    54.0,
+    56.1
+   ],
+   "Sonnet 5.5": [
+    null,
+    20.7,
+    29.8,
+    43.9,
+    57.1,
+    63.6
+   ]
+  },
+  "Terminal-Bench 2.1": {
+   "GPT-6.1 Sol": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "Sonnet 5.5": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  "SciCode": {
+   "GPT-6.1 Sol": [
+    null,
+    53.2,
+    53.2,
+    55.8,
+    55.7,
+    54.2
+   ],
+   "Sonnet 5.5": [
+    null,
+    49.1,
+    52.9,
+    53.7,
+    57.3,
+    61.0
+   ]
+  },
+  "AA Index coding category": {
+   "GPT-6.1 Sol": [
+    null,
+    42.0,
+    50.6,
+    53.6,
+    54.9,
+    55.2
+   ],
+   "Sonnet 5.5": [
+    null,
+    34.9,
+    41.4,
+    48.8,
+    57.2,
+    62.3
+   ]
+  },
+  "ARC-AGI-2": {
+   "GPT-6.1 Sol": [
+    null,
+    76.7,
+    86.7,
+    91.7,
+    91.7,
+    94.2
+   ],
+   "Sonnet 5.5": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  }
+ },
+ "costs": {
+  "AA Intelligence Index": {
+   "GPT-6.1 Sol": [
+    null,
+    250.0,
+    361.0,
+    521.0,
+    662.0,
+    1080.0
+   ],
+   "Sonnet 5.5": [
+    null,
+    482.0,
+    622.0,
+    1030.0,
+    2180.0,
+    7260.0
+   ]
+  },
+  "Humanity's Last Exam": {
+   "GPT-6.1 Sol": [
+    null,
+    0.00731,
+    0.0126,
+    0.0266,
+    0.0428,
+    0.0776
+   ],
+   "Sonnet 5.5": [
+    null,
+    0.0128,
+    0.0232,
+    0.0473,
+    0.118,
+    0.544
+   ]
+  },
+  "CritPt": {
+   "GPT-6.1 Sol": [
+    null,
+    0.0272,
+    0.0395,
+    0.0757,
+    0.119,
+    0.242
+   ],
+   "Sonnet 5.5": [
+    null,
+    0.0862,
+    0.149,
+    0.281,
+    0.65,
+    1.89
+   ]
+  },
+  "AA-Omniscience Index": {
+   "GPT-6.1 Sol": [
+    null,
+    0.00145,
+    0.00222,
+    0.00458,
+    0.00822,
+    0.0167
+   ],
+   "Sonnet 5.5": [
+    null,
+    0.00274,
+    0.00294,
+    0.00536,
+    0.00849,
+    0.147
+   ]
+  },
+  "GDPval-AA": {
+   "GPT-6.1 Sol": [
+    null,
+    0.105,
+    0.231,
+    0.428,
+    0.558,
+    0.894
+   ],
+   "Sonnet 5.5": [
+    null,
+    0.209,
+    0.318,
+    0.688,
+    1.95,
+    6.84
+   ]
+  },
+  "AutomationBench-AA": {
+   "GPT-6.1 Sol": [
+    null,
+    0.159,
+    0.196,
+    0.226,
+    0.251,
+    0.297
+   ],
+   "Sonnet 5.5": [
+    null,
+    0.241,
+    0.262,
+    0.313,
+    0.422,
+    1.03
+   ]
+  },
+  "AA-LCR": {
+   "GPT-6.1 Sol": [
+    null,
+    0.19,
+    0.19,
+    0.191,
+    0.193,
+    0.199
+   ],
+   "Sonnet 5.5": [
+    null,
+    0.291,
+    0.292,
+    0.294,
+    0.297,
+    0.339
+   ]
+  },
+  "Terminal-Bench 4.0": {
+   "GPT-6.1 Sol": [
+    null,
+    0.383,
+    0.614,
+    0.828,
+    1.03,
+    1.82
+   ],
+   "Sonnet 5.5": [
+    null,
+    1.28,
+    1.58,
+    2.19,
+    6.08,
+    12.6
+   ]
+  },
+  "SciCode": {
+   "GPT-6.1 Sol": [
+    null,
+    0.00842,
+    0.00931,
+    0.013,
+    0.022,
+    0.0434
+   ],
+   "Sonnet 5.5": [
+    null,
+    0.0129,
+    0.0135,
+    0.016,
+    0.0237,
+    0.278
+   ]
+  },
+  "AA Index coding category": {
+   "GPT-6.1 Sol": [
+    null,
+    0.196,
+    0.312,
+    0.421,
+    0.524,
+    0.933
+   ],
+   "Sonnet 5.5": [
+    null,
+    0.649,
+    0.796,
+    1.1,
+    3.05,
+    6.46
+   ]
+  },
+  "ARC-AGI-2": {
+   "GPT-6.1 Sol": [
+    null,
+    0.0855,
+    0.1,
+    0.135,
+    0.178,
+    0.254
+   ],
+   "Sonnet 5.5": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  }
+ },
+ "estimated": [],
+ "changed_existing": [
+  {
+   "kind": "score",
+   "metric": "AA Intelligence Index",
+   "model": "GPT-6 Sol",
+   "level": "off",
+   "charts_py": 28.1,
+   "current": 28.5
+  },
+  {
+   "kind": "score",
+   "metric": "AA Intelligence Index",
+   "model": "GPT-6 Sol",
+   "level": "low",
+   "charts_py": 33.9,
+   "current": 34.2
+  },
+  {
+   "kind": "score",
+   "metric": "AA Intelligence Index",
+   "model": "GPT-6 Sol",
+   "level": "high",
+   "charts_py": 42.8,
+   "current": 42.4
+  },
+  {
+   "kind": "score",
+   "metric": "AA Intelligence Index",
+   "model": "GPT-6 Sol",
+   "level": "xhigh",
+   "charts_py": 44.1,
+   "current": 44.2
+  },
+  {
+   "kind": "score",
+   "metric": "AA Intelligence Index",
+   "model": "GPT-6 Sol",
+   "level": "max",
+   "charts_py": 47.5,
+   "current": 47.6
+  },
+  {
+   "kind": "score",
+   "metric": "GDPval-AA",
+   "model": "GPT-5.6 Sol",
+   "level": "off",
+   "charts_py": 1226,
+   "current": 1242
+  },
+  {
+   "kind": "score",
+   "metric": "GDPval-AA",
+   "model": "GPT-5.6 Sol",
+   "level": "low",
+   "charts_py": 1289,
+   "current": 1305
+  },
+  {
+   "kind": "score",
+   "metric": "GDPval-AA",
+   "model": "GPT-5.6 Sol",
+   "level": "medium",
+   "charts_py": 1403,
+   "current": 1422
+  },
+  {
+   "kind": "score",
+   "metric": "GDPval-AA",
+   "model": "GPT-5.6 Sol",
+   "level": "high",
+   "charts_py": 1480,
+   "current": 1505
+  },
+  {
+   "kind": "score",
+   "metric": "GDPval-AA",
+   "model": "GPT-5.6 Sol",
+   "level": "xhigh",
+   "charts_py": 1548,
+   "current": 1572
+  },
+  {
+   "kind": "score",
+   "metric": "GDPval-AA",
+   "model": "GPT-5.6 Sol",
+   "level": "max",
+   "charts_py": 1588,
+   "current": 1611
+  },
+  {
+   "kind": "score",
+   "metric": "GDPval-AA",
+   "model": "GPT-6 Sol",
+   "level": "off",
+   "charts_py": 1225,
+   "current": 1252
+  },
+  {
+   "kind": "score",
+   "metric": "GDPval-AA",
+   "model": "GPT-6 Sol",
+   "level": "low",
+   "charts_py": 1176,
+   "current": 1204
+  },
+  {
+   "kind": "score",
+   "metric": "GDPval-AA",
+   "model": "GPT-6 Sol",
+   "level": "medium",
+   "charts_py": 1320,
+   "current": 1350
+  },
+  {
+   "kind": "score",
+   "metric": "GDPval-AA",
+   "model": "GPT-6 Sol",
+   "level": "high",
+   "charts_py": 1376,
+   "current": 1396
+  },
+  {
+   "kind": "score",
+   "metric": "GDPval-AA",
+   "model": "GPT-6 Sol",
+   "level": "xhigh",
+   "charts_py": 1437,
+   "current": 1457
+  },
+  {
+   "kind": "score",
+   "metric": "GDPval-AA",
+   "model": "GPT-6 Sol",
+   "level": "max",
+   "charts_py": 1487,
+   "current": 1510
+  },
+  {
+   "kind": "score",
+   "metric": "GDPval-AA",
+   "model": "Fable 5.1",
+   "level": "low",
+   "charts_py": 1450,
+   "current": 1469
+  },
+  {
+   "kind": "score",
+   "metric": "GDPval-AA",
+   "model": "Fable 5.1",
+   "level": "medium",
+   "charts_py": 1536,
+   "current": 1549
+  },
+  {
+   "kind": "score",
+   "metric": "GDPval-AA",
+   "model": "Fable 5.1",
+   "level": "high",
+   "charts_py": 1617,
+   "current": 1635
+  },
+  {
+   "kind": "score",
+   "metric": "GDPval-AA",
+   "model": "Fable 5.1",
+   "level": "xhigh",
+   "charts_py": 1721,
+   "current": 1734
+  },
+  {
+   "kind": "score",
+   "metric": "GDPval-AA",
+   "model": "Fable 5.1",
+   "level": "max",
+   "charts_py": 1735,
+   "current": 1758
+  },
+  {
+   "kind": "score",
+   "metric": "GDPval-AA",
+   "model": "Opus 5.5",
+   "level": "low",
+   "charts_py": 1224,
+   "current": 1235
+  },
+  {
+   "kind": "score",
+   "metric": "GDPval-AA",
+   "model": "Opus 5.5",
+   "level": "medium",
+   "charts_py": 1576,
+   "current": 1586
+  },
+  {
+   "kind": "score",
+   "metric": "GDPval-AA",
+   "model": "Opus 5.5",
+   "level": "high",
+   "charts_py": 1692,
+   "current": 1707
+  },
+  {
+   "kind": "score",
+   "metric": "GDPval-AA",
+   "model": "Opus 5.5",
+   "level": "xhigh",
+   "charts_py": 1820,
+   "current": 1837
+  },
+  {
+   "kind": "score",
+   "metric": "GDPval-AA",
+   "model": "Opus 5.5",
+   "level": "max",
+   "charts_py": 1846,
+   "current": 1866
+  },
+  {
+   "kind": "score",
+   "metric": "ARC-AGI-2",
+   "model": "GPT-6 Sol",
+   "current": [
+    1.7,
+    31.5,
+    57.8,
+    68.9,
+    78.1,
+    89.6
+   ],
+   "cost": [
+    0.0741,
+    0.101,
+    0.148,
+    0.203,
+    0.277,
+    0.439
+   ]
+  }
+ ],
+ "notes": {
+  "all": "Sources fetched 2026-10-07: artificialanalysis.ai/models/<slug> page payloads, and arcprize.org/media/data/leaderboard/v2.json. Neither new model has an 'off' level on AA (no -non-reasoning variant) or on ARC Prize. Both Claude models run with 'Default Fallback' on AA.",
+  "AA Intelligence Index": "Not flagged estimated at any level for either new model. Cost is the whole-index total in US$.",
+  "Terminal-Bench 2.1": "AA has not run either new model on TB 2.1.",
+  "ARC-AGI-2": "Sonnet 5.5 is not on the ARC Prize v2 leaderboard. GPT-6.1 Sol has no 'none' level there.",
+  "GDPval-AA": "Elo. AA re-rated all existing models (+10 to +30 Elo) after the new models joined, so existing values in charts.py are stale."
+ }
+}
