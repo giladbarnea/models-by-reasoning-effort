@@ -1,4 +1,5 @@
-// Drag across a chart with a mouse to open a full-screen chart of only the points inside the rectangle.
+// Drag across a chart to open a full-screen chart of only the points inside the rectangle. With a mouse the drag starts
+// at once; on a touch screen it starts after the finger presses still for a second, so a quick swipe still scrolls.
 // The page works without this script; it only adds the zoom where JavaScript runs.
 (() => {
   const data = JSON.parse(document.getElementById("chart-data").textContent);
@@ -6,9 +7,15 @@
   const plotHost = dialog.querySelector(".zoom-plot");
   const SVG = "http://www.w3.org/2000/svg";
   const MINIMUM_DRAG_PIXELS = 8;
+  const LONG_PRESS_MILLISECONDS = 1000;
+  const LONG_PRESS_TOLERANCE_PIXELS = 8;  // a finger that moves farther before the press completes is scrolling
   const LABEL_GAP_PIXELS = 21;
   const MARGIN = { left: 60, right: 170, top: 16, bottom: 44 };
+  // Below this plot width the zoom drops the model names beside the points (its legend names the colors) to give the plot room.
+  const COMPACT_WIDTH = 520;
+  const COMPACT_MARGIN = { left: 40, right: 44, top: 12, bottom: 36 };
   let drag = null;
+  let press = null;
   let shown = null;
 
   document.body.classList.add("zoomable");
@@ -31,18 +38,57 @@
     };
   }
 
-  document.addEventListener("pointerdown", event => {
-    const plot = event.target.closest(".plot[data-metric]");  // effort charts only
-    if (!plot || event.pointerType !== "mouse" || event.button !== 0) return;
-    event.preventDefault();
+  function startDrag(plot, clientX, clientY) {
     const box = document.createElement("div");
     box.className = "selection";
     plot.append(box);
     document.body.classList.add("dragging");
-    drag = { plot, box, startX: event.clientX, startY: event.clientY, endX: event.clientX, endY: event.clientY };
+    drag = { plot, box, startX: clientX, startY: clientY, endX: clientX, endY: clientY };
+  }
+
+  function endDrag() {
+    const finished = drag;
+    drag = null;
+    finished.box.remove();
+    document.body.classList.remove("dragging");
+    return finished;
+  }
+
+  function cancelPress() {
+    clearTimeout(press?.timer);
+    press = null;
+  }
+
+  function pressAndHold(plot, event) {
+    const { clientX, clientY } = event;
+    press = { clientX, clientY, timer: setTimeout(() => {
+      press = null;
+      startDrag(plot, clientX, clientY);
+      navigator.vibrate?.(10);
+    }, LONG_PRESS_MILLISECONDS) };
+  }
+
+  document.addEventListener("pointerdown", event => {
+    const plot = event.target.closest(".plot[data-metric]");  // effort charts only
+    if (!plot || !event.isPrimary) return;
+    if (event.pointerType !== "mouse") return pressAndHold(plot, event);
+    if (event.button !== 0) return;
+    event.preventDefault();
+    startDrag(plot, event.clientX, event.clientY);
+  });
+
+  // Once a touch selection starts, the finger draws the rectangle instead of scrolling the page.
+  document.addEventListener("touchmove", event => { if (drag) event.preventDefault(); }, { passive: false });
+  document.addEventListener("contextmenu", event => { if (press || drag) event.preventDefault(); });
+  document.addEventListener("pointercancel", () => {
+    cancelPress();
+    if (drag) endDrag();
   });
 
   document.addEventListener("pointermove", event => {
+    if (press && Math.hypot(event.clientX - press.clientX, event.clientY - press.clientY) > LONG_PRESS_TOLERANCE_PIXELS) {
+      cancelPress();
+    }
     if (!drag) return;
     drag.endX = event.clientX;
     drag.endY = event.clientY;
@@ -56,11 +102,9 @@
   });
 
   document.addEventListener("pointerup", () => {
+    cancelPress();
     if (!drag) return;
-    const finished = drag;
-    drag = null;
-    finished.box.remove();
-    document.body.classList.remove("dragging");
+    const finished = endDrag();
     const tooSmall = Math.abs(finished.endX - finished.startX) < MINIMUM_DRAG_PIXELS
       || Math.abs(finished.endY - finished.startY) < MINIMUM_DRAG_PIXELS;
     if (tooSmall) return;
@@ -151,20 +195,22 @@
     const width = plotHost.clientWidth;
     const height = plotHost.clientHeight;
     const svg = element(plotHost, "svg", { viewBox: `0 0 ${width} ${height}` });
-    const x = level => MARGIN.left + (level - firstLevel + 0.5) / (lastLevel - firstLevel + 1) * (width - MARGIN.left - MARGIN.right);
-    const y = score => MARGIN.top + (ticks.high - score) / (ticks.high - ticks.low) * (height - MARGIN.top - MARGIN.bottom);
-    const text = { fontFamily: "inherit", fontSize: "15px" };
+    const compact = width < COMPACT_WIDTH;
+    const margin = compact ? COMPACT_MARGIN : MARGIN;
+    const x = level => margin.left + (level - firstLevel + 0.5) / (lastLevel - firstLevel + 1) * (width - margin.left - margin.right);
+    const y = score => margin.top + (ticks.high - score) / (ticks.high - ticks.low) * (height - margin.top - margin.bottom);
+    const text = { fontFamily: "inherit", fontSize: compact ? "13px" : "15px" };
 
     for (const value of ticks.values) {
-      element(svg, "line", { x1: MARGIN.left, x2: width - MARGIN.right, y1: y(value), y2: y(value) },
+      element(svg, "line", { x1: margin.left, x2: width - margin.right, y1: y(value), y2: y(value) },
         { stroke: "var(--grid)", strokeWidth: "1" });
-      element(svg, "text", { x: MARGIN.left - 12, y: y(value), "text-anchor": "end", "dominant-baseline": "middle" },
+      element(svg, "text", { x: margin.left - 12, y: y(value), "text-anchor": "end", "dominant-baseline": "middle" },
         { ...text, fill: "var(--ink-3)" }).textContent = value.toFixed(ticks.decimals);
     }
     element(svg, "line", { x1: x(firstLevel - 0.35), x2: x(lastLevel + 0.35), y1: y(ticks.low), y2: y(ticks.low) },
       { stroke: "var(--baseline)", strokeWidth: "1" });
     for (let level = firstLevel; level <= lastLevel; level += 1) {
-      element(svg, "text", { x: x(level), y: height - MARGIN.bottom + 28, "text-anchor": "middle" },
+      element(svg, "text", { x: x(level), y: height - margin.bottom + (compact ? 22 : 28), "text-anchor": "middle" },
         { ...text, fill: "var(--ink-3)" }).textContent = data.levels[level];
     }
 
@@ -185,7 +231,8 @@
       });
     }
 
-    // Each level's labels sit right of their points, spread apart vertically; each model's last point also names it.
+    // Each level's labels sit right of their points, spread apart vertically; outside compact mode each model's last
+    // point also names it.
     for (let level = firstLevel; level <= lastLevel; level += 1) {
       const column = points.filter(point => point.level === level).sort((a, b) => y(a.score) - y(b.score));
       const labelYs = spread(column.map(point => y(point.score)), LABEL_GAP_PIXELS);
@@ -203,7 +250,7 @@
         });
         label.textContent = format(point.score);
         const isLast = !points.some(other => other.model === point.model && other.level > point.level);
-        if (isLast) {
+        if (isLast && !compact) {
           const name = element(label, "tspan", { dx: "8" }, {
             fontFamily: "Menlo, monospace", fontSize: "12.5px", fontWeight: "400", fill: "var(--ink-3)",
           });

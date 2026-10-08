@@ -353,7 +353,7 @@ DEFAULT_COST_UNIT = "US$ per task, log scale"
 TITLE = "Models by reasoning effort"
 SUBTITLE = ("Tap a model to hide or show it. Show exactly two models to see where they come closest: "
             "a dashed line joins their nearest scores at different effort levels. Hover a level to read every score. "
-            "With a mouse, drag across a chart to zoom in on the points inside. "
+            "To zoom in on some points, drag across them with a mouse, or press and hold a finger for a second, then drag. "
             "Switch the x axis to cost to see what each effort level costs: the best models sit top left.")
 
 FOOTNOTES = {
@@ -1084,7 +1084,7 @@ th, td { padding: 4px 10px; text-align: right; white-space: nowrap; }
 thead th { color: var(--ink-3); font-weight: 500; border-bottom: 1px solid var(--baseline); }
 tbody th, td.model { text-align: left; }
 tr.first > * { border-top: 1px solid var(--grid); }
-.zoomable .plot[data-metric] { cursor: crosshair; user-select: none; -webkit-user-select: none; }
+.zoomable .plot[data-metric] { cursor: crosshair; user-select: none; -webkit-user-select: none; -webkit-touch-callout: none; }
 .dragging .tip, .dragging .column::before, .dragging .ring { display: none; }
 .selection { position: absolute; z-index: 6; pointer-events: none; border: 1px solid var(--ink-2);
   background: color-mix(in srgb, var(--ink-2) 10%, transparent); }
@@ -1092,6 +1092,7 @@ tr.first > * { border-top: 1px solid var(--grid); }
   background: var(--surface); color: var(--ink-1); }
 #zoom[open] { display: flex; flex-direction: column; }
 #zoom::backdrop { background: rgba(0, 0, 0, .45); }
+@media (max-width: 699.98px) { #zoom { padding: 16px 16px 12px; } }
 #zoom:focus { outline: none; }
 .zoom-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; }
 .zoom-head h3 { margin: 0; font-size: 22px; }
