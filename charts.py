@@ -50,7 +50,7 @@ GRIDLINE = Color("grid", "#e1e0d9", "#2c2c2a")
 BASELINE = Color("baseline", "#c3c2b7", "#383835")
 BORDER = Color("border", "rgba(11,11,11,0.10)", "rgba(255,255,255,0.10)")
 
-EFFORT_LEVELS = ["off", "low", "medium", "high", "xhigh", "max"]
+EFFORT_LEVELS = ["low", "medium", "high", "xhigh", "max"]
 
 
 def slugify(text: str) -> str:
@@ -71,14 +71,12 @@ class Model:
         return slugify(self.name)
 
 
-GPT_5_6_SOL = Model("GPT-5.6 Sol", Color("series-1", "#2a78d6", "#3987e5"))
 GPT_6_ASTRA = Model("GPT-6 Astra", Color("series-2", "#eb6834", "#d95926"))
-GPT_6_SOL = Model("GPT-6 Sol", Color("series-3", "#1baf7a", "#199e70"))
 CLAUDE_FABLE_5_1 = Model("Fable 5.1", Color("series-4", "#eda100", "#c98500"))
 CLAUDE_OPUS_5_5 = Model("Opus 5.5", Color("series-5", "#e87ba4", "#d55181"))
 GPT_6_1_SOL = Model("GPT-6.1 Sol", Color("series-6", "#008300", "#008300"))
 CLAUDE_SONNET_5_5 = Model("Sonnet 5.5", Color("series-7", "#4a3aa7", "#9085e9"))
-MODELS = [GPT_5_6_SOL, GPT_6_ASTRA, GPT_6_SOL, GPT_6_1_SOL, CLAUDE_FABLE_5_1, CLAUDE_OPUS_5_5, CLAUDE_SONNET_5_5]
+MODELS = [GPT_6_ASTRA, GPT_6_1_SOL, CLAUDE_FABLE_5_1, CLAUDE_OPUS_5_5, CLAUDE_SONNET_5_5]
 COLORS = [SURFACE, PAGE, TEXT_PRIMARY, TEXT_SECONDARY, TEXT_MUTED, GRIDLINE, BASELINE, BORDER,
           *(model.color for model in MODELS)]
 
@@ -113,153 +111,117 @@ class Metric:
 
 INTELLIGENCE = [
     Metric("AA Intelligence Index", "v4.3.2 · Artificial Analysis", {
-        GPT_5_6_SOL: [28.3, 33.5, 39.2, 42.3, 44.0, 47.0],
-        GPT_6_ASTRA: [None, 45.8, 49.6, 50.9, 52.4, 52.7],
-        GPT_6_SOL: [28.5, 34.2, 39.8, 42.4, 44.2, 47.6],
-        GPT_6_1_SOL: [None, 42.1, 47.8, 50.2, 51.0, 51.8],
-        CLAUDE_FABLE_5_1: [None, 46.8, 48.9, 51.2, 53.2, 53.4],
-        CLAUDE_OPUS_5_5: [None, 42.3, 51.2, 53.6, 56.0, 57.6],
-        CLAUDE_SONNET_5_5: [None, 35.9, 40.8, 46.8, 51.9, 56.0],
-    }, (20, 60), 10, estimated=frozenset({(GPT_5_6_SOL, "off")})),
+        GPT_6_ASTRA: [45.8, 49.6, 50.9, 52.4, 52.7],
+        GPT_6_1_SOL: [42.1, 47.8, 50.2, 51.0, 51.8],
+        CLAUDE_FABLE_5_1: [46.8, 48.9, 51.2, 53.2, 53.4],
+        CLAUDE_OPUS_5_5: [42.3, 51.2, 53.6, 56.0, 57.6],
+        CLAUDE_SONNET_5_5: [35.9, 40.8, 46.8, 51.9, 56.0],
+    }, (30, 60), 10),
     Metric("Humanity's Last Exam", "% · Artificial Analysis", {
-        GPT_5_6_SOL: [16.7, 39.4, 42.2, 46.0, 47.3, 49.5],
-        GPT_6_ASTRA: [None, 49.2, 52.7, 53.1, 54.6, 54.7],
-        GPT_6_SOL: [18.4, 34.9, 41.0, 44.1, 46.3, 47.9],
-        GPT_6_1_SOL: [None, 47.4, 49.9, 51.4, 52.6, 52.9],
-        CLAUDE_FABLE_5_1: [None, 48.9, 53.8, 55.9, 58.7, 59.1],
-        CLAUDE_OPUS_5_5: [None, 48.3, 54.7, 55.6, 57.5, 61.4],
-        CLAUDE_SONNET_5_5: [None, 36.2, 39.8, 45.8, 50.0, 55.0],
-    }, (10, 70), 10),
+        GPT_6_ASTRA: [49.2, 52.7, 53.1, 54.6, 54.7],
+        GPT_6_1_SOL: [47.4, 49.9, 51.4, 52.6, 52.9],
+        CLAUDE_FABLE_5_1: [48.9, 53.8, 55.9, 58.7, 59.1],
+        CLAUDE_OPUS_5_5: [48.3, 54.7, 55.6, 57.5, 61.4],
+        CLAUDE_SONNET_5_5: [36.2, 39.8, 45.8, 50.0, 55.0],
+    }, (30, 70), 10),
     Metric("CritPt", "% · Artificial Analysis", {
-        GPT_5_6_SOL: [5.1, 14.9, 22.9, 25.7, 28.6, 32.3],
-        GPT_6_ASTRA: [None, 26.3, 29.1, 28.9, 31.4, 31.7],
-        GPT_6_SOL: [4.0, 16.3, 24.6, 25.4, 28.0, 30.9],
-        GPT_6_1_SOL: [None, 24.9, 27.7, 30.0, 31.7, 31.7],
-        CLAUDE_FABLE_5_1: [None, 27.7, 29.1, 30.3, 31.1, 29.7],
-        CLAUDE_OPUS_5_5: [None, 17.7, 27.7, 30.9, 31.7, 31.7],
-        CLAUDE_SONNET_5_5: [None, 11.4, 16.9, 24.6, 31.1, 31.4],
+        GPT_6_ASTRA: [26.3, 29.1, 28.9, 31.4, 31.7],
+        GPT_6_1_SOL: [24.9, 27.7, 30.0, 31.7, 31.7],
+        CLAUDE_FABLE_5_1: [27.7, 29.1, 30.3, 31.1, 29.7],
+        CLAUDE_OPUS_5_5: [17.7, 27.7, 30.9, 31.7, 31.7],
+        CLAUDE_SONNET_5_5: [11.4, 16.9, 24.6, 31.1, 31.4],
     }, (0, 40), 10),
     Metric("ARC-AGI-2", "% semi-private · ARC Prize", {
-        GPT_5_6_SOL: [None, 42.5, 67.1, 85.4, 90.0, 92.5],
-        GPT_6_ASTRA: [59.6, 85.4, 92.1, 92.1, 93.3, 95.0],
-        GPT_6_SOL: [1.7, 31.5, 57.8, 68.9, 78.1, 89.6],
-        GPT_6_1_SOL: [None, 76.7, 86.7, 91.7, 91.7, 94.2],
-        CLAUDE_FABLE_5_1: [None, 78.3, 86.2, 88.8, 90.0, 90.0],
-        CLAUDE_OPUS_5_5: [None, 70.1, 87.5, 93.3, 92.5, 91.7],
-    }, (0, 100), 20),
+        GPT_6_ASTRA: [85.4, 92.1, 92.1, 93.3, 95.0],
+        GPT_6_1_SOL: [76.7, 86.7, 91.7, 91.7, 94.2],
+        CLAUDE_FABLE_5_1: [78.3, 86.2, 88.8, 90.0, 90.0],
+        CLAUDE_OPUS_5_5: [70.1, 87.5, 93.3, 92.5, 91.7],
+    }, (60, 100), 10),
     Metric("AA-Omniscience Index", "−100 to 100 · Artificial Analysis", {
-        GPT_5_6_SOL: [1.1, 18.9, 19.4, 20.4, 21.0, 22.0],
-        GPT_6_ASTRA: [None, 40.5, 42.2, 43.7, 43.4, 43.4],
-        GPT_6_SOL: [-0.8, 26.5, 27.0, 26.8, 26.7, 27.1],
-        GPT_6_1_SOL: [None, 37.6, 40.0, 41.5, 40.9, 41.5],
-        CLAUDE_FABLE_5_1: [None, 34.1, 37.6, 40.8, 42.4, 43.5],
-        CLAUDE_OPUS_5_5: [None, 38.9, 40.3, 40.6, 42.6, 46.4],
-        CLAUDE_SONNET_5_5: [None, 19.4, 20.1, 20.9, 23.5, 32.3],
-    }, (-10, 50), 10),
+        GPT_6_ASTRA: [40.5, 42.2, 43.7, 43.4, 43.4],
+        GPT_6_1_SOL: [37.6, 40.0, 41.5, 40.9, 41.5],
+        CLAUDE_FABLE_5_1: [34.1, 37.6, 40.8, 42.4, 43.5],
+        CLAUDE_OPUS_5_5: [38.9, 40.3, 40.6, 42.6, 46.4],
+        CLAUDE_SONNET_5_5: [19.4, 20.1, 20.9, 23.5, 32.3],
+    }, (10, 50), 10),
     Metric("GDPval-AA", "Elo · Artificial Analysis", {
-        GPT_5_6_SOL: [1242, 1305, 1422, 1505, 1572, 1611],
-        GPT_6_ASTRA: [None, 1366, 1468, 1485, 1516, 1542],
-        GPT_6_SOL: [1252, 1204, 1350, 1396, 1457, 1510],
-        GPT_6_1_SOL: [None, 1297, 1433, 1486, 1510, 1575],
-        CLAUDE_FABLE_5_1: [None, 1469, 1549, 1635, 1734, 1758],
-        CLAUDE_OPUS_5_5: [None, 1235, 1586, 1707, 1837, 1866],
-        CLAUDE_SONNET_5_5: [None, 1179, 1324, 1551, 1731, 1839],
+        GPT_6_ASTRA: [1366, 1468, 1485, 1516, 1542],
+        GPT_6_1_SOL: [1297, 1433, 1486, 1510, 1575],
+        CLAUDE_FABLE_5_1: [1469, 1549, 1635, 1734, 1758],
+        CLAUDE_OPUS_5_5: [1235, 1586, 1707, 1837, 1866],
+        CLAUDE_SONNET_5_5: [1179, 1324, 1551, 1731, 1839],
     }, (1100, 1900), 200, decimals=0),
     Metric("AA-Briefcase", "Elo · long-horizon knowledge work · Artificial Analysis", {
-        GPT_5_6_SOL: [1009, 1043, 1242, 1368, 1438, 1478],
-        GPT_6_ASTRA: [None, 1261, 1459, 1507, 1544, 1569],
-        GPT_6_SOL: [1104, 886, 1150, 1268, 1359, 1479],
-        GPT_6_1_SOL: [None, 1118, 1365, 1471, 1507, 1564],
-        CLAUDE_FABLE_5_1: [None, 1482, 1529, 1581, 1656, 1675],
-        CLAUDE_OPUS_5_5: [None, 1280, 1628, 1689, 1768, 1807],
-        CLAUDE_SONNET_5_5: [None, 1272, 1442, 1639, 1751, 1823],
-    }, (800, 1900), 200, decimals=0),
+        GPT_6_ASTRA: [1261, 1459, 1507, 1544, 1569],
+        GPT_6_1_SOL: [1118, 1365, 1471, 1507, 1564],
+        CLAUDE_FABLE_5_1: [1482, 1529, 1581, 1656, 1675],
+        CLAUDE_OPUS_5_5: [1280, 1628, 1689, 1768, 1807],
+        CLAUDE_SONNET_5_5: [1272, 1442, 1639, 1751, 1823],
+    }, (1000, 1900), 200, decimals=0),
     Metric("AutomationBench-AA", "% · Artificial Analysis", {
-        GPT_5_6_SOL: [22.7, 41.0, 51.3, 55.3, 55.3, 60.1],
-        GPT_6_ASTRA: [None, 59.1, 64.6, 66.6, 67.2, 68.5],
-        GPT_6_SOL: [34.2, 53.9, 58.0, 60.1, 61.7, 61.6],
-        GPT_6_1_SOL: [None, 52.6, 62.6, 64.5, 66.6, 64.9],
-        CLAUDE_FABLE_5_1: [None, 52.2, 54.7, 55.3, 57.8, 59.4],
-        CLAUDE_OPUS_5_5: [None, 52.9, 61.2, 63.2, 65.0, 69.5],
-        CLAUDE_SONNET_5_5: [None, 49.4, 54.9, 59.4, 65.5, 71.8],
-    }, (20, 80), 20),
+        GPT_6_ASTRA: [59.1, 64.6, 66.6, 67.2, 68.5],
+        GPT_6_1_SOL: [52.6, 62.6, 64.5, 66.6, 64.9],
+        CLAUDE_FABLE_5_1: [52.2, 54.7, 55.3, 57.8, 59.4],
+        CLAUDE_OPUS_5_5: [52.9, 61.2, 63.2, 65.0, 69.5],
+        CLAUDE_SONNET_5_5: [49.4, 54.9, 59.4, 65.5, 71.8],
+    }, (40, 80), 10),
     Metric("AA-LCR", "% long-context reasoning · Artificial Analysis", {
-        GPT_5_6_SOL: [62.3, 78.0, 80.3, 81.7, 82.3, 84.0],
-        GPT_6_ASTRA: [None, 80.0, 79.7, 80.0, 80.0, 80.7],
-        GPT_6_SOL: [64.0, 79.3, 82.3, 83.7, 81.3, 83.7],
-        GPT_6_1_SOL: [None, 84.0, 83.3, 82.3, 79.7, 83.0],
-        CLAUDE_FABLE_5_1: [None, 82.3, 84.7, 83.7, 83.0, 85.3],
-        CLAUDE_OPUS_5_5: [None, 80.7, 84.3, 82.7, 84.7, 84.7],
-        CLAUDE_SONNET_5_5: [None, 76.0, 76.3, 78.0, 79.7, 82.7],
-    }, (60, 90), 10),
+        GPT_6_ASTRA: [80.0, 79.7, 80.0, 80.0, 80.7],
+        GPT_6_1_SOL: [84.0, 83.3, 82.3, 79.7, 83.0],
+        CLAUDE_FABLE_5_1: [82.3, 84.7, 83.7, 83.0, 85.3],
+        CLAUDE_OPUS_5_5: [80.7, 84.3, 82.7, 84.7, 84.7],
+        CLAUDE_SONNET_5_5: [76.0, 76.3, 78.0, 79.7, 82.7],
+    }, (70, 90), 5),
     Metric("GDP.pdf", "% all-pass · Q&A over complex PDFs · Artificial Analysis", {
-        GPT_5_6_SOL: [15.2, 21.0, 26.2, 27.8, 27.6, 27.2],
-        GPT_6_ASTRA: [None, 30.4, 30.4, 31.0, 32.2, 31.0],
-        GPT_6_SOL: [17.0, 24.2, 23.8, 24.4, 24.6, 25.2],
-        GPT_6_1_SOL: [None, 27.0, 30.0, 32.0, 31.8, 31.0],
-        CLAUDE_FABLE_5_1: [None, 28.0, 26.8, 26.8, 26.2, 26.2],
-        CLAUDE_OPUS_5_5: [None, 25.6, 25.6, 28.8, 26.6, 26.2],
-        CLAUDE_SONNET_5_5: [None, 16.0, 20.2, 25.2, 24.6, 25.8],
+        GPT_6_ASTRA: [30.4, 30.4, 31.0, 32.2, 31.0],
+        GPT_6_1_SOL: [27.0, 30.0, 32.0, 31.8, 31.0],
+        CLAUDE_FABLE_5_1: [28.0, 26.8, 26.8, 26.2, 26.2],
+        CLAUDE_OPUS_5_5: [25.6, 25.6, 28.8, 26.6, 26.2],
+        CLAUDE_SONNET_5_5: [16.0, 20.2, 25.2, 24.6, 25.8],
     }, (10, 35), 5),
 ]
 
 CODING = [
-    Metric("AA Coding Agent Index", "v1.4 · reported by OpenAI", {
-        GPT_5_6_SOL: [43.4, 55.2, 61.6, 64.1, 63.3, 65.1],
-        GPT_6_ASTRA: [None, 62.6, 65.3, 65.5, 67.0, 67.0],
-    }, (40, 70), 10),
     Metric("AA Index coding category", "mean of TB 4.0 & SciCode · derived from AA", {
-        GPT_5_6_SOL: [None, 28.7, 36.0, 39.2, 40.9, 48.5],
-        GPT_6_ASTRA: [None, 48.0, 51.9, 54.7, 57.7, 57.8],
-        GPT_6_SOL: [30.2, 29.7, 36.2, 40.6, 42.7, 50.8],
-        GPT_6_1_SOL: [None, 42.0, 50.6, 53.6, 54.9, 55.2],
-        CLAUDE_FABLE_5_1: [None, 48.5, 50.6, 55.4, 58.0, 57.5],
-        CLAUDE_OPUS_5_5: [None, 45.0, 55.9, 58.5, 62.3, 63.2],
-        CLAUDE_SONNET_5_5: [None, 34.9, 41.4, 48.8, 57.2, 62.3],
-    }, (20, 70), 10),
+        GPT_6_ASTRA: [48.0, 51.9, 54.7, 57.7, 57.8],
+        GPT_6_1_SOL: [42.0, 50.6, 53.6, 54.9, 55.2],
+        CLAUDE_FABLE_5_1: [48.5, 50.6, 55.4, 58.0, 57.5],
+        CLAUDE_OPUS_5_5: [45.0, 55.9, 58.5, 62.3, 63.2],
+        CLAUDE_SONNET_5_5: [34.9, 41.4, 48.8, 57.2, 62.3],
+    }, (30, 70), 10),
     Metric("Terminal-Bench 4.0", "% · Artificial Analysis", {
-        GPT_5_6_SOL: [None, 1.0, 14.6, 20.7, 24.7, 39.9],
-        GPT_6_ASTRA: [None, 41.9, 49.5, 54.0, 59.6, 59.1],
-        GPT_6_SOL: [13.1, 9.1, 18.7, 26.3, 30.3, 43.9],
-        GPT_6_1_SOL: [None, 30.8, 48.0, 51.5, 54.0, 56.1],
-        CLAUDE_FABLE_5_1: [None, 40.4, 44.9, 52.0, 55.1, 52.0],
-        CLAUDE_OPUS_5_5: [None, 31.3, 52.5, 56.6, 59.6, 59.6],
-        CLAUDE_SONNET_5_5: [None, 20.7, 29.8, 43.9, 57.1, 63.6],
-    }, (0, 70), 10),
+        GPT_6_ASTRA: [41.9, 49.5, 54.0, 59.6, 59.1],
+        GPT_6_1_SOL: [30.8, 48.0, 51.5, 54.0, 56.1],
+        CLAUDE_FABLE_5_1: [40.4, 44.9, 52.0, 55.1, 52.0],
+        CLAUDE_OPUS_5_5: [31.3, 52.5, 56.6, 59.6, 59.6],
+        CLAUDE_SONNET_5_5: [20.7, 29.8, 43.9, 57.1, 63.6],
+    }, (10, 70), 10),
     Metric("Terminal-Bench 2.1", "% · Artificial Analysis", {
-        GPT_5_6_SOL: [74.2, 76.8, 86.1, 87.3, 89.5, 88.0],
-        GPT_6_ASTRA: [None, 88.0, 89.5, 89.9, 89.1, 88.4],
-        CLAUDE_FABLE_5_1: [None, 85.0, 88.0, 89.9, 91.0, 91.4],
-    }, (70, 95), 5),
+        GPT_6_ASTRA: [88.0, 89.5, 89.9, 89.1, 88.4],
+        CLAUDE_FABLE_5_1: [85.0, 88.0, 89.9, 91.0, 91.4],
+    }, (80, 95), 5),
     Metric("DeepSWE v1.1", "% · reported by OpenAI", {
-        GPT_5_6_SOL: [None, 45.4, 61.1, 69.4, 70.7, 72.7],
-        GPT_6_ASTRA: [None, 67.0, 72.8, 73.2, 74.1, 73.2],
-        GPT_6_SOL: [None, 37.2, 56.6, 65.3, 66.6, 68.8],
-        GPT_6_1_SOL: [None, 64.4, 73.0, 75.2, 71.9, 71.9],
-    }, (30, 80), 10),
+        GPT_6_ASTRA: [67.0, 72.8, 73.2, 74.1, 73.2],
+        GPT_6_1_SOL: [64.4, 73.0, 75.2, 71.9, 71.9],
+    }, (60, 80), 5),
     Metric("FrontierCode 1.1 Main", "score · Cognition leaderboard", {
-        GPT_5_6_SOL: [None, 35.4, 39.9, 45.1, 46.8, 47.5],
-        GPT_6_ASTRA: [None, 45.3, 48.8, 50.9, 50.6, 53.3],
-        GPT_6_SOL: [None, 37.3, 45.9, 47.7, 48.4, 49.3],
-        GPT_6_1_SOL: [None, 45.5, 50.2, 48.0, 49.3, 47.6],
-        CLAUDE_FABLE_5_1: [None, 49.8, 50.9, 50.3, 48.7, 50.3],
-        CLAUDE_OPUS_5_5: [None, 47.3, 54.6, 54.0, 51.4, 54.4],
-        CLAUDE_SONNET_5_5: [None, 29.3, 36.5, 49.4, 52.1, 46.2],
+        GPT_6_ASTRA: [45.3, 48.8, 50.9, 50.6, 53.3],
+        GPT_6_1_SOL: [45.5, 50.2, 48.0, 49.3, 47.6],
+        CLAUDE_FABLE_5_1: [49.8, 50.9, 50.3, 48.7, 50.3],
+        CLAUDE_OPUS_5_5: [47.3, 54.6, 54.0, 51.4, 54.4],
+        CLAUDE_SONNET_5_5: [29.3, 36.5, 49.4, 52.1, 46.2],
     }, (20, 60), 10),
     Metric("CursorBench 4.0", "% · Cursor leaderboard", {
-        GPT_5_6_SOL: [None, 24.6, 31.1, 35.7, 37.7, 41.7],
-        CLAUDE_FABLE_5_1: [None, 45.1, 46.8, 49.2, 51.6, 51.8],
-        CLAUDE_OPUS_5_5: [None, 43.7, 52.5, 56.0, 56.0, 57.8],
-        CLAUDE_SONNET_5_5: [None, 35.8, 39.2, 47.8, 53.1, 55.5],
-    }, (20, 60), 10),
+        CLAUDE_FABLE_5_1: [45.1, 46.8, 49.2, 51.6, 51.8],
+        CLAUDE_OPUS_5_5: [43.7, 52.5, 56.0, 56.0, 57.8],
+        CLAUDE_SONNET_5_5: [35.8, 39.2, 47.8, 53.1, 55.5],
+    }, (30, 60), 10),
     Metric("SciCode", "% · Artificial Analysis", {
-        GPT_5_6_SOL: [47.7, 56.4, 57.4, 57.8, 57.1, 57.1],
-        GPT_6_ASTRA: [None, 54.1, 54.2, 55.4, 55.7, 56.5],
-        GPT_6_SOL: [47.3, 50.2, 53.8, 54.9, 55.1, 57.6],
-        GPT_6_1_SOL: [None, 53.2, 53.2, 55.8, 55.7, 54.2],
-        CLAUDE_FABLE_5_1: [None, 56.7, 56.4, 58.7, 60.9, 63.1],
-        CLAUDE_OPUS_5_5: [None, 58.6, 59.3, 60.4, 65.0, 66.9],
-        CLAUDE_SONNET_5_5: [None, 49.1, 52.9, 53.7, 57.3, 61.0],
+        GPT_6_ASTRA: [54.1, 54.2, 55.4, 55.7, 56.5],
+        GPT_6_1_SOL: [53.2, 53.2, 55.8, 55.7, 54.2],
+        CLAUDE_FABLE_5_1: [56.7, 56.4, 58.7, 60.9, 63.1],
+        CLAUDE_OPUS_5_5: [58.6, 59.3, 60.4, 65.0, 66.9],
+        CLAUDE_SONNET_5_5: [49.1, 52.9, 53.7, 57.3, 61.0],
     }, (45, 70), 5),
 ]
 
@@ -285,14 +247,9 @@ class ReportedMetric:
 # Collected by a research pass into single_value_benchmarks.json, with sources there.
 REPORTED = {"Coding": [
     ReportedMetric("SWE-Bench Pro", "% resolved · each lab’s own run on its own agent harness", {
-        GPT_5_6_SOL: (64.6, "effort not stated"),
         CLAUDE_FABLE_5_1: (81.2, "max"),
         CLAUDE_OPUS_5_5: (89.9, "max"),
         CLAUDE_SONNET_5_5: (81.3, "max"),
-    }),
-    ReportedMetric("LiveCodeBench", "% · v6 · Vals AI", {
-        GPT_5_6_SOL: (82.6, "max"),
-        CLAUDE_FABLE_5_1: (90.5, "max"),
     }),
 ]}
 
@@ -300,120 +257,94 @@ REPORTED = {"Coding": [
 # Generated by build_costs.py. The coding category averages its two benchmarks' costs.
 COSTS: dict[str, dict[Model, Scores]] = {
     'AA Intelligence Index': {
-        GPT_5_6_SOL: [None, 637.0, 997.0, 1490.0, 2080.0, 3460.0],
-        GPT_6_ASTRA: [None, 1540.0, 2430.0, 2930.0, 3800.0, 5320.0],
-        GPT_6_SOL: [448.0, 268.0, 417.0, 610.0, 865.0, 1550.0],
-        GPT_6_1_SOL: [None, 250.0, 361.0, 521.0, 662.0, 1080.0],
-        CLAUDE_FABLE_5_1: [None, 3160.0, 3980.0, 5240.0, 9060.0, 13100.0],
-        CLAUDE_OPUS_5_5: [None, 860.0, 1630.0, 2170.0, 4060.0, 8710.0],
-        CLAUDE_SONNET_5_5: [None, 482.0, 622.0, 1030.0, 2180.0, 7260.0],
+        GPT_6_ASTRA: [1540.0, 2430.0, 2930.0, 3800.0, 5320.0],
+        GPT_6_1_SOL: [250.0, 361.0, 521.0, 662.0, 1080.0],
+        CLAUDE_FABLE_5_1: [3160.0, 3980.0, 5240.0, 9060.0, 13100.0],
+        CLAUDE_OPUS_5_5: [860.0, 1630.0, 2170.0, 4060.0, 8710.0],
+        CLAUDE_SONNET_5_5: [482.0, 622.0, 1030.0, 2180.0, 7260.0],
     },
     "Humanity's Last Exam": {
-        GPT_5_6_SOL: [None, 0.0224, 0.043, 0.0828, 0.142, 0.268],
-        GPT_6_ASTRA: [None, 0.0389, 0.101, 0.162, 0.253, 0.378],
-        GPT_6_SOL: [0.0021, 0.00698, 0.0175, 0.0331, 0.0591, 0.12],
-        GPT_6_1_SOL: [None, 0.00731, 0.0126, 0.0266, 0.0428, 0.0776],
-        CLAUDE_FABLE_5_1: [None, 0.124, 0.225, 0.397, 1.03, 1.59],
-        CLAUDE_OPUS_5_5: [None, 0.0286, 0.0619, 0.104, 0.241, 0.718],
-        CLAUDE_SONNET_5_5: [None, 0.0128, 0.0232, 0.0473, 0.118, 0.544],
+        GPT_6_ASTRA: [0.0389, 0.101, 0.162, 0.253, 0.378],
+        GPT_6_1_SOL: [0.00731, 0.0126, 0.0266, 0.0428, 0.0776],
+        CLAUDE_FABLE_5_1: [0.124, 0.225, 0.397, 1.03, 1.59],
+        CLAUDE_OPUS_5_5: [0.0286, 0.0619, 0.104, 0.241, 0.718],
+        CLAUDE_SONNET_5_5: [0.0128, 0.0232, 0.0473, 0.118, 0.544],
     },
     'CritPt': {
-        GPT_5_6_SOL: [None, 0.0751, 0.126, 0.245, 0.437, 0.859],
-        GPT_6_ASTRA: [None, 0.145, 0.285, 0.434, 0.798, 1.17],
-        GPT_6_SOL: [0.0134, 0.0219, 0.0461, 0.0866, 0.154, 0.324],
-        GPT_6_1_SOL: [None, 0.0272, 0.0395, 0.0757, 0.119, 0.242],
-        CLAUDE_FABLE_5_1: [None, 1.26, 1.8, 2.75, 4.53, 5.71],
-        CLAUDE_OPUS_5_5: [None, 0.124, 0.345, 0.53, 1.17, 2.19],
-        CLAUDE_SONNET_5_5: [None, 0.0862, 0.149, 0.281, 0.65, 1.89],
+        GPT_6_ASTRA: [0.145, 0.285, 0.434, 0.798, 1.17],
+        GPT_6_1_SOL: [0.0272, 0.0395, 0.0757, 0.119, 0.242],
+        CLAUDE_FABLE_5_1: [1.26, 1.8, 2.75, 4.53, 5.71],
+        CLAUDE_OPUS_5_5: [0.124, 0.345, 0.53, 1.17, 2.19],
+        CLAUDE_SONNET_5_5: [0.0862, 0.149, 0.281, 0.65, 1.89],
     },
     'AA-Omniscience Index': {
-        GPT_5_6_SOL: [None, 0.00589, 0.0102, 0.018, 0.0331, 0.0854],
-        GPT_6_ASTRA: [None, 0.00696, 0.015, 0.0272, 0.0502, 0.097],
-        GPT_6_SOL: [0.000361, 0.00156, 0.00335, 0.00635, 0.0117, 0.0269],
-        GPT_6_1_SOL: [None, 0.00145, 0.00222, 0.00458, 0.00822, 0.0167],
-        CLAUDE_FABLE_5_1: [None, 0.00864, 0.0153, 0.0207, 0.0773, 0.268],
-        CLAUDE_OPUS_5_5: [None, 0.00577, 0.00755, 0.00853, 0.0135, 0.161],
-        CLAUDE_SONNET_5_5: [None, 0.00274, 0.00294, 0.00536, 0.00849, 0.147],
+        GPT_6_ASTRA: [0.00696, 0.015, 0.0272, 0.0502, 0.097],
+        GPT_6_1_SOL: [0.00145, 0.00222, 0.00458, 0.00822, 0.0167],
+        CLAUDE_FABLE_5_1: [0.00864, 0.0153, 0.0207, 0.0773, 0.268],
+        CLAUDE_OPUS_5_5: [0.00577, 0.00755, 0.00853, 0.0135, 0.161],
+        CLAUDE_SONNET_5_5: [0.00274, 0.00294, 0.00536, 0.00849, 0.147],
     },
     'GDPval-AA': {
-        GPT_5_6_SOL: [None, 0.268, 0.595, 1.11, 1.7, 2.81],
-        GPT_6_ASTRA: [None, 0.855, 1.82, 2.43, 3.04, 4.53],
-        GPT_6_SOL: [0.259, 0.0869, 0.238, 0.483, 0.767, 1.32],
-        GPT_6_1_SOL: [None, 0.105, 0.231, 0.428, 0.558, 0.894],
-        CLAUDE_FABLE_5_1: [None, 1.43, 2.18, 3.48, 7.22, 9.77],
-        CLAUDE_OPUS_5_5: [None, 0.214, 0.856, 1.54, 4.21, 8.92],
-        CLAUDE_SONNET_5_5: [None, 0.209, 0.318, 0.688, 1.95, 6.84],
+        GPT_6_ASTRA: [0.855, 1.82, 2.43, 3.04, 4.53],
+        GPT_6_1_SOL: [0.105, 0.231, 0.428, 0.558, 0.894],
+        CLAUDE_FABLE_5_1: [1.43, 2.18, 3.48, 7.22, 9.77],
+        CLAUDE_OPUS_5_5: [0.214, 0.856, 1.54, 4.21, 8.92],
+        CLAUDE_SONNET_5_5: [0.209, 0.318, 0.688, 1.95, 6.84],
     },
     'AutomationBench-AA': {
-        GPT_5_6_SOL: [None, 0.47, 0.601, 0.741, 0.811, 0.972],
-        GPT_6_ASTRA: [None, 0.999, 1.18, 1.3, 1.41, 1.6],
-        GPT_6_SOL: [0.256, 0.191, 0.218, 0.254, 0.292, 0.358],
-        GPT_6_1_SOL: [None, 0.159, 0.196, 0.226, 0.251, 0.297],
-        CLAUDE_FABLE_5_1: [None, 1.52, 1.64, 1.77, 2.2, 2.61],
-        CLAUDE_OPUS_5_5: [None, 0.493, 0.638, 0.699, 0.878, 1.43],
-        CLAUDE_SONNET_5_5: [None, 0.241, 0.262, 0.313, 0.422, 1.03],
+        GPT_6_ASTRA: [0.999, 1.18, 1.3, 1.41, 1.6],
+        GPT_6_1_SOL: [0.159, 0.196, 0.226, 0.251, 0.297],
+        CLAUDE_FABLE_5_1: [1.52, 1.64, 1.77, 2.2, 2.61],
+        CLAUDE_OPUS_5_5: [0.493, 0.638, 0.699, 0.878, 1.43],
+        CLAUDE_SONNET_5_5: [0.241, 0.262, 0.313, 0.422, 1.03],
     },
     'AA-LCR': {
-        GPT_5_6_SOL: [None, 0.382, 0.383, 0.386, 0.388, 0.402],
-        GPT_6_ASTRA: [None, 0.95, 0.953, 0.96, 0.97, 0.997],
-        GPT_6_SOL: [0.189, 0.19, 0.191, 0.191, 0.193, 0.198],
-        GPT_6_1_SOL: [None, 0.19, 0.19, 0.191, 0.193, 0.199],
-        CLAUDE_FABLE_5_1: [None, 1.47, 1.48, 1.48, 1.51, 1.58],
-        CLAUDE_OPUS_5_5: [None, 0.587, 0.59, 0.592, 0.599, 0.677],
-        CLAUDE_SONNET_5_5: [None, 0.291, 0.292, 0.294, 0.297, 0.339],
+        GPT_6_ASTRA: [0.95, 0.953, 0.96, 0.97, 0.997],
+        GPT_6_1_SOL: [0.19, 0.19, 0.191, 0.193, 0.199],
+        CLAUDE_FABLE_5_1: [1.47, 1.48, 1.48, 1.51, 1.58],
+        CLAUDE_OPUS_5_5: [0.587, 0.59, 0.592, 0.599, 0.677],
+        CLAUDE_SONNET_5_5: [0.291, 0.292, 0.294, 0.297, 0.339],
     },
     'Terminal-Bench 4.0': {
-        GPT_5_6_SOL: [None, 0.524, 1.64, 2.22, 3.46, 8.09],
-        GPT_6_ASTRA: [None, 2.25, 4.43, 4.05, 5.86, 8.5],
-        GPT_6_SOL: [1.94, 0.489, 1.12, 1.6, 1.91, 4.0],
-        GPT_6_1_SOL: [None, 0.383, 0.614, 0.828, 1.03, 1.82],
-        CLAUDE_FABLE_5_1: [None, 7.32, 9.12, 11.6, 15.8, 19.2],
-        CLAUDE_OPUS_5_5: [None, 2.08, 4.04, 5.12, 8.78, 13.1],
-        CLAUDE_SONNET_5_5: [None, 1.28, 1.58, 2.19, 6.08, 12.6],
+        GPT_6_ASTRA: [2.25, 4.43, 4.05, 5.86, 8.5],
+        GPT_6_1_SOL: [0.383, 0.614, 0.828, 1.03, 1.82],
+        CLAUDE_FABLE_5_1: [7.32, 9.12, 11.6, 15.8, 19.2],
+        CLAUDE_OPUS_5_5: [2.08, 4.04, 5.12, 8.78, 13.1],
+        CLAUDE_SONNET_5_5: [1.28, 1.58, 2.19, 6.08, 12.6],
     },
     'SciCode': {
-        GPT_5_6_SOL: [None, 0.0241, 0.0285, 0.0353, 0.0449, 0.0797],
-        GPT_6_ASTRA: [None, 0.0425, 0.0509, 0.0696, 0.122, 0.232],
-        GPT_6_SOL: [0.00694, 0.00743, 0.00949, 0.013, 0.0215, 0.0425],
-        GPT_6_1_SOL: [None, 0.00842, 0.00931, 0.013, 0.022, 0.0434],
-        CLAUDE_FABLE_5_1: [None, 0.069, 0.0756, 0.0891, 0.241, 0.659],
-        CLAUDE_OPUS_5_5: [None, 0.0264, 0.0355, 0.0402, 0.0676, 0.469],
-        CLAUDE_SONNET_5_5: [None, 0.0129, 0.0135, 0.016, 0.0237, 0.278],
+        GPT_6_ASTRA: [0.0425, 0.0509, 0.0696, 0.122, 0.232],
+        GPT_6_1_SOL: [0.00842, 0.00931, 0.013, 0.022, 0.0434],
+        CLAUDE_FABLE_5_1: [0.069, 0.0756, 0.0891, 0.241, 0.659],
+        CLAUDE_OPUS_5_5: [0.0264, 0.0355, 0.0402, 0.0676, 0.469],
+        CLAUDE_SONNET_5_5: [0.0129, 0.0135, 0.016, 0.0237, 0.278],
     },
     'AA Index coding category': {
-        GPT_5_6_SOL: [None, 0.274, 0.836, 1.13, 1.75, 4.09],
-        GPT_6_ASTRA: [None, 1.15, 2.24, 2.06, 2.99, 4.37],
-        GPT_6_SOL: [0.973, 0.248, 0.564, 0.806, 0.963, 2.02],
-        GPT_6_1_SOL: [None, 0.196, 0.312, 0.421, 0.524, 0.933],
-        CLAUDE_FABLE_5_1: [None, 3.7, 4.6, 5.86, 8.01, 9.94],
-        CLAUDE_OPUS_5_5: [None, 1.05, 2.04, 2.58, 4.42, 6.79],
-        CLAUDE_SONNET_5_5: [None, 0.649, 0.796, 1.1, 3.05, 6.46],
+        GPT_6_ASTRA: [1.15, 2.24, 2.06, 2.99, 4.37],
+        GPT_6_1_SOL: [0.196, 0.312, 0.421, 0.524, 0.933],
+        CLAUDE_FABLE_5_1: [3.7, 4.6, 5.86, 8.01, 9.94],
+        CLAUDE_OPUS_5_5: [1.05, 2.04, 2.58, 4.42, 6.79],
+        CLAUDE_SONNET_5_5: [0.649, 0.796, 1.1, 3.05, 6.46],
     },
     'ARC-AGI-2': {
-        GPT_5_6_SOL: [None, 0.32, 0.47, 0.74, 1.04, 1.44],
-        GPT_6_ASTRA: [0.37, 0.416, 0.48, 0.668, 0.829, 1.12],
-        GPT_6_SOL: [0.0741, 0.101, 0.148, 0.203, 0.277, 0.439],
-        GPT_6_1_SOL: [None, 0.0855, 0.1, 0.135, 0.178, 0.254],
-        CLAUDE_FABLE_5_1: [None, 0.952, 1.22, 1.67, 3.12, 4.49],
-        CLAUDE_OPUS_5_5: [None, 0.241, 0.337, 0.408, 0.671, 1.85],
+        GPT_6_ASTRA: [0.416, 0.48, 0.668, 0.829, 1.12],
+        GPT_6_1_SOL: [0.0855, 0.1, 0.135, 0.178, 0.254],
+        CLAUDE_FABLE_5_1: [0.952, 1.22, 1.67, 3.12, 4.49],
+        CLAUDE_OPUS_5_5: [0.241, 0.337, 0.408, 0.671, 1.85],
     },
     'AA-Briefcase': {
-        GPT_5_6_SOL: [None, 0.419, 0.968, 2.06, 3.08, 4.02],
-        GPT_6_ASTRA: [None, 1.44, 3.94, 4.76, 6.56, 9.5],
-        GPT_6_SOL: [0.374, 0.127, 0.33, 0.639, 1.13, 2.62],
-        GPT_6_1_SOL: [None, 0.177, 0.464, 0.837, 1.04, 2.31],
-        CLAUDE_FABLE_5_1: [None, 6.72, 8.58, 11.4, 17.8, 22.7],
-        CLAUDE_OPUS_5_5: [None, 1.15, 4.4, 6.27, 12.3, 21.0],
-        CLAUDE_SONNET_5_5: [None, 0.802, 1.39, 3.27, 6.98, 20.5],
+        GPT_6_ASTRA: [1.44, 3.94, 4.76, 6.56, 9.5],
+        GPT_6_1_SOL: [0.177, 0.464, 0.837, 1.04, 2.31],
+        CLAUDE_FABLE_5_1: [6.72, 8.58, 11.4, 17.8, 22.7],
+        CLAUDE_OPUS_5_5: [1.15, 4.4, 6.27, 12.3, 21.0],
+        CLAUDE_SONNET_5_5: [0.802, 1.39, 3.27, 6.98, 20.5],
     },
     'GDP.pdf': {
-        GPT_5_6_SOL: [None, 0.63, 0.653, 0.7, 0.782, 0.929],
-        GPT_6_ASTRA: [None, 1.7, 1.72, 1.79, 1.91, 2.08],
-        GPT_6_SOL: [0.329, 0.331, 0.337, 0.348, 0.37, 0.425],
-        GPT_6_1_SOL: [None, 0.334, 0.337, 0.349, 0.368, 0.42],
-        CLAUDE_FABLE_5_1: [None, 1.92, 1.96, 2.02, 2.32, 2.77],
-        CLAUDE_OPUS_5_5: [None, 0.764, 0.795, 0.825, 0.964, 1.55],
-        CLAUDE_SONNET_5_5: [None, 0.372, 0.381, 0.409, 0.46, 0.794],
+        GPT_6_ASTRA: [1.7, 1.72, 1.79, 1.91, 2.08],
+        GPT_6_1_SOL: [0.334, 0.337, 0.349, 0.368, 0.42],
+        CLAUDE_FABLE_5_1: [1.92, 1.96, 2.02, 2.32, 2.77],
+        CLAUDE_OPUS_5_5: [0.764, 0.795, 0.825, 0.964, 1.55],
+        CLAUDE_SONNET_5_5: [0.372, 0.381, 0.409, 0.46, 0.794],
     },
 }
 COST_UNITS = {"AA Intelligence Index": "US$ to run the whole index, log scale"}
@@ -426,21 +357,19 @@ SUBTITLE = ("Tap a model to hide or show it. Show exactly two models to see wher
             "Switch the x axis to cost to see what each effort level costs: the best models sit top left.")
 
 FOOTNOTES = {
-    "Intelligence": "Hollow marker: estimated by Artificial Analysis, not measured. GPT-6 Astra has no “off” level "
-                    "except in ARC Prize’s “none” run, and GPT-6.1 Sol has none at all. The Claude models have no “off” "
-                    "level: AA and ARC Prize run them only with adaptive reasoning. ARC Prize has not tested Sonnet 5.5 "
+    "Intelligence": "No model here has an “off” level, so the charts start at low. The one exception is ARC "
+                    "Prize’s “none” run of GPT-6 Astra: 59.6% at US$0.37 per task. The Claude models run only with "
+                    "adaptive reasoning. ARC Prize has not tested Sonnet 5.5 "
                     "yet. AA re-rates its Elo benchmarks (GDPval-AA, AA-Briefcase) whenever a model joins; "
                     "these are the ratings of 7–8 October 2026. Cost: AA’s measured US-dollar cost "
                     "per task of each benchmark at each effort level, ARC Prize’s for ARC-AGI-2, and AA’s total cost "
                     "to run the whole AA Intelligence Index.",
-    "Coding": "AA Coding Agent Index v1.4 as charted on OpenAI’s Astra page, before the newer GPT and Claude models. "
-              "AA’s live version, max only: GPT-5.6 Sol 54.6, GPT-6 Astra 61.6, GPT-6 Sol 56.7, Fable 5.1 62.2, "
-              "Opus 5.5 66.0. DeepSWE has no per-level scores for the Claude models; Sonnet 5.5’s system card "
-              "reports 71.0 at max. AA ran Terminal-Bench 2.1 only on GPT-5.6 Sol, GPT-6 Astra and Fable 5.1. "
+    "Coding": "DeepSWE has no per-level scores for the Claude models; Sonnet 5.5’s system card "
+              "reports 71.0 at max. AA ran Terminal-Bench 2.1 only on GPT-6 Astra and Fable 5.1. "
               "CursorBench lists no GPT-6 model. Terminal-Bench scores are AA’s own runs; "
               "Anthropic reports higher scores for its models. Cost: AA’s US-dollar cost per task; the coding "
               "category averages the costs of Terminal-Bench 4.0 and SciCode. The other coding charts have no cost data. "
-              "SWE-Bench Pro and LiveCodeBench have one reported score per model, so they show as bars. Each lab ran "
+              "SWE-Bench Pro has one reported score per model, so it shows as bars. Each lab ran "
               "SWE-Bench Pro itself on its own agent harness, which can move scores a lot, so compare its bars with care.",
 }
 
@@ -589,8 +518,8 @@ def cross_level_meetings(metric: Metric) -> list[Meeting]:
 def element_id(role: str, *models: Model) -> str:
     """Tag an artist with its role and models. The page shows it only while all its models are visible.
 
-    >>> element_id("meeting", GPT_6_ASTRA, GPT_6_SOL)
-    'meeting__gpt-6-astra__gpt-6-sol'
+    >>> element_id("meeting", GPT_6_ASTRA, GPT_6_1_SOL)
+    'meeting__gpt-6-astra__gpt-6-1-sol'
     """
     return "__".join([role, *(model.slug for model in models)])
 
@@ -834,8 +763,8 @@ def draw_panel(axes: Axes, metric: Metric) -> None:
 def cost_points(metric: Metric, model: Model) -> list[tuple[int, float, float]]:
     """The (level, cost, score) points where the model has both a score and a cost.
 
-    >>> cost_points(INTELLIGENCE[0], GPT_5_6_SOL)[0]
-    (1, 637.0, 33.5)
+    >>> cost_points(INTELLIGENCE[0], GPT_6_1_SOL)[0]
+    (0, 250.0, 42.1)
     """
     costs = metric.costs.get(model, [None] * len(EFFORT_LEVELS))
     return [(index, cost, score) for index, (score, cost) in enumerate(zip(metric.scores[model], costs))
