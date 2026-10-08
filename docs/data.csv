@@ -1,0 +1,141 @@
+category,metric,unit_and_source,model,measure,low,medium,high,xhigh,max
+intelligence,AA Intelligence Index,v4.3.2 · Artificial Analysis,GPT-6 Astra,score,45.8,49.6,50.9,52.4,52.7
+intelligence,AA Intelligence Index,"US$ to run the whole index, log scale",GPT-6 Astra,cost_usd,1540.0,2430.0,2930.0,3800.0,5320.0
+intelligence,AA Intelligence Index,v4.3.2 · Artificial Analysis,GPT-6.1 Sol,score,42.1,47.8,50.2,51.0,51.8
+intelligence,AA Intelligence Index,"US$ to run the whole index, log scale",GPT-6.1 Sol,cost_usd,250.0,361.0,521.0,662.0,1080.0
+intelligence,AA Intelligence Index,v4.3.2 · Artificial Analysis,Fable 5.1,score,46.8,48.9,51.2,53.2,53.4
+intelligence,AA Intelligence Index,"US$ to run the whole index, log scale",Fable 5.1,cost_usd,3160.0,3980.0,5240.0,9060.0,13100.0
+intelligence,AA Intelligence Index,v4.3.2 · Artificial Analysis,Opus 5.5,score,42.3,51.2,53.6,56.0,57.6
+intelligence,AA Intelligence Index,"US$ to run the whole index, log scale",Opus 5.5,cost_usd,860.0,1630.0,2170.0,4060.0,8710.0
+intelligence,AA Intelligence Index,v4.3.2 · Artificial Analysis,Sonnet 5.5,score,35.9,40.8,46.8,51.9,56.0
+intelligence,AA Intelligence Index,"US$ to run the whole index, log scale",Sonnet 5.5,cost_usd,482.0,622.0,1030.0,2180.0,7260.0
+intelligence,Humanity's Last Exam,% · Artificial Analysis,GPT-6 Astra,score,49.2,52.7,53.1,54.6,54.7
+intelligence,Humanity's Last Exam,"US$ per task, log scale",GPT-6 Astra,cost_usd,0.0389,0.101,0.162,0.253,0.378
+intelligence,Humanity's Last Exam,% · Artificial Analysis,GPT-6.1 Sol,score,47.4,49.9,51.4,52.6,52.9
+intelligence,Humanity's Last Exam,"US$ per task, log scale",GPT-6.1 Sol,cost_usd,0.00731,0.0126,0.0266,0.0428,0.0776
+intelligence,Humanity's Last Exam,% · Artificial Analysis,Fable 5.1,score,48.9,53.8,55.9,58.7,59.1
+intelligence,Humanity's Last Exam,"US$ per task, log scale",Fable 5.1,cost_usd,0.124,0.225,0.397,1.03,1.59
+intelligence,Humanity's Last Exam,% · Artificial Analysis,Opus 5.5,score,48.3,54.7,55.6,57.5,61.4
+intelligence,Humanity's Last Exam,"US$ per task, log scale",Opus 5.5,cost_usd,0.0286,0.0619,0.104,0.241,0.718
+intelligence,Humanity's Last Exam,% · Artificial Analysis,Sonnet 5.5,score,36.2,39.8,45.8,50.0,55.0
+intelligence,Humanity's Last Exam,"US$ per task, log scale",Sonnet 5.5,cost_usd,0.0128,0.0232,0.0473,0.118,0.544
+intelligence,CritPt,% · Artificial Analysis,GPT-6 Astra,score,26.3,29.1,28.9,31.4,31.7
+intelligence,CritPt,"US$ per task, log scale",GPT-6 Astra,cost_usd,0.145,0.285,0.434,0.798,1.17
+intelligence,CritPt,% · Artificial Analysis,GPT-6.1 Sol,score,24.9,27.7,30.0,31.7,31.7
+intelligence,CritPt,"US$ per task, log scale",GPT-6.1 Sol,cost_usd,0.0272,0.0395,0.0757,0.119,0.242
+intelligence,CritPt,% · Artificial Analysis,Fable 5.1,score,27.7,29.1,30.3,31.1,29.7
+intelligence,CritPt,"US$ per task, log scale",Fable 5.1,cost_usd,1.26,1.8,2.75,4.53,5.71
+intelligence,CritPt,% · Artificial Analysis,Opus 5.5,score,17.7,27.7,30.9,31.7,31.7
+intelligence,CritPt,"US$ per task, log scale",Opus 5.5,cost_usd,0.124,0.345,0.53,1.17,2.19
+intelligence,CritPt,% · Artificial Analysis,Sonnet 5.5,score,11.4,16.9,24.6,31.1,31.4
+intelligence,CritPt,"US$ per task, log scale",Sonnet 5.5,cost_usd,0.0862,0.149,0.281,0.65,1.89
+intelligence,ARC-AGI-2,% semi-private · ARC Prize,GPT-6 Astra,score,85.4,92.1,92.1,93.3,95.0
+intelligence,ARC-AGI-2,"US$ per task, log scale",GPT-6 Astra,cost_usd,0.416,0.48,0.668,0.829,1.12
+intelligence,ARC-AGI-2,% semi-private · ARC Prize,GPT-6.1 Sol,score,76.7,86.7,91.7,91.7,94.2
+intelligence,ARC-AGI-2,"US$ per task, log scale",GPT-6.1 Sol,cost_usd,0.0855,0.1,0.135,0.178,0.254
+intelligence,ARC-AGI-2,% semi-private · ARC Prize,Fable 5.1,score,78.3,86.2,88.8,90.0,90.0
+intelligence,ARC-AGI-2,"US$ per task, log scale",Fable 5.1,cost_usd,0.952,1.22,1.67,3.12,4.49
+intelligence,ARC-AGI-2,% semi-private · ARC Prize,Opus 5.5,score,70.1,87.5,93.3,92.5,91.7
+intelligence,ARC-AGI-2,"US$ per task, log scale",Opus 5.5,cost_usd,0.241,0.337,0.408,0.671,1.85
+intelligence,AA-Omniscience Index,−100 to 100 · Artificial Analysis,GPT-6 Astra,score,40.5,42.2,43.7,43.4,43.4
+intelligence,AA-Omniscience Index,"US$ per task, log scale",GPT-6 Astra,cost_usd,0.00696,0.015,0.0272,0.0502,0.097
+intelligence,AA-Omniscience Index,−100 to 100 · Artificial Analysis,GPT-6.1 Sol,score,37.6,40.0,41.5,40.9,41.5
+intelligence,AA-Omniscience Index,"US$ per task, log scale",GPT-6.1 Sol,cost_usd,0.00145,0.00222,0.00458,0.00822,0.0167
+intelligence,AA-Omniscience Index,−100 to 100 · Artificial Analysis,Fable 5.1,score,34.1,37.6,40.8,42.4,43.5
+intelligence,AA-Omniscience Index,"US$ per task, log scale",Fable 5.1,cost_usd,0.00864,0.0153,0.0207,0.0773,0.268
+intelligence,AA-Omniscience Index,−100 to 100 · Artificial Analysis,Opus 5.5,score,38.9,40.3,40.6,42.6,46.4
+intelligence,AA-Omniscience Index,"US$ per task, log scale",Opus 5.5,cost_usd,0.00577,0.00755,0.00853,0.0135,0.161
+intelligence,AA-Omniscience Index,−100 to 100 · Artificial Analysis,Sonnet 5.5,score,19.4,20.1,20.9,23.5,32.3
+intelligence,AA-Omniscience Index,"US$ per task, log scale",Sonnet 5.5,cost_usd,0.00274,0.00294,0.00536,0.00849,0.147
+intelligence,GDPval-AA,Elo · Artificial Analysis,GPT-6 Astra,score,1366,1468,1485,1516,1542
+intelligence,GDPval-AA,"US$ per task, log scale",GPT-6 Astra,cost_usd,0.855,1.82,2.43,3.04,4.53
+intelligence,GDPval-AA,Elo · Artificial Analysis,GPT-6.1 Sol,score,1297,1433,1486,1510,1575
+intelligence,GDPval-AA,"US$ per task, log scale",GPT-6.1 Sol,cost_usd,0.105,0.231,0.428,0.558,0.894
+intelligence,GDPval-AA,Elo · Artificial Analysis,Fable 5.1,score,1469,1549,1635,1734,1758
+intelligence,GDPval-AA,"US$ per task, log scale",Fable 5.1,cost_usd,1.43,2.18,3.48,7.22,9.77
+intelligence,GDPval-AA,Elo · Artificial Analysis,Opus 5.5,score,1235,1586,1707,1837,1866
+intelligence,GDPval-AA,"US$ per task, log scale",Opus 5.5,cost_usd,0.214,0.856,1.54,4.21,8.92
+intelligence,GDPval-AA,Elo · Artificial Analysis,Sonnet 5.5,score,1179,1324,1551,1731,1839
+intelligence,GDPval-AA,"US$ per task, log scale",Sonnet 5.5,cost_usd,0.209,0.318,0.688,1.95,6.84
+intelligence,AA-Briefcase,Elo · long-horizon knowledge work · Artificial Analysis,GPT-6 Astra,score,1261,1459,1507,1544,1569
+intelligence,AA-Briefcase,"US$ per task, log scale",GPT-6 Astra,cost_usd,1.44,3.94,4.76,6.56,9.5
+intelligence,AA-Briefcase,Elo · long-horizon knowledge work · Artificial Analysis,GPT-6.1 Sol,score,1118,1365,1471,1507,1564
+intelligence,AA-Briefcase,"US$ per task, log scale",GPT-6.1 Sol,cost_usd,0.177,0.464,0.837,1.04,2.31
+intelligence,AA-Briefcase,Elo · long-horizon knowledge work · Artificial Analysis,Fable 5.1,score,1482,1529,1581,1656,1675
+intelligence,AA-Briefcase,"US$ per task, log scale",Fable 5.1,cost_usd,6.72,8.58,11.4,17.8,22.7
+intelligence,AA-Briefcase,Elo · long-horizon knowledge work · Artificial Analysis,Opus 5.5,score,1280,1628,1689,1768,1807
+intelligence,AA-Briefcase,"US$ per task, log scale",Opus 5.5,cost_usd,1.15,4.4,6.27,12.3,21.0
+intelligence,AA-Briefcase,Elo · long-horizon knowledge work · Artificial Analysis,Sonnet 5.5,score,1272,1442,1639,1751,1823
+intelligence,AA-Briefcase,"US$ per task, log scale",Sonnet 5.5,cost_usd,0.802,1.39,3.27,6.98,20.5
+intelligence,AutomationBench-AA,% · Artificial Analysis,GPT-6 Astra,score,59.1,64.6,66.6,67.2,68.5
+intelligence,AutomationBench-AA,"US$ per task, log scale",GPT-6 Astra,cost_usd,0.999,1.18,1.3,1.41,1.6
+intelligence,AutomationBench-AA,% · Artificial Analysis,GPT-6.1 Sol,score,52.6,62.6,64.5,66.6,64.9
+intelligence,AutomationBench-AA,"US$ per task, log scale",GPT-6.1 Sol,cost_usd,0.159,0.196,0.226,0.251,0.297
+intelligence,AutomationBench-AA,% · Artificial Analysis,Fable 5.1,score,52.2,54.7,55.3,57.8,59.4
+intelligence,AutomationBench-AA,"US$ per task, log scale",Fable 5.1,cost_usd,1.52,1.64,1.77,2.2,2.61
+intelligence,AutomationBench-AA,% · Artificial Analysis,Opus 5.5,score,52.9,61.2,63.2,65.0,69.5
+intelligence,AutomationBench-AA,"US$ per task, log scale",Opus 5.5,cost_usd,0.493,0.638,0.699,0.878,1.43
+intelligence,AutomationBench-AA,% · Artificial Analysis,Sonnet 5.5,score,49.4,54.9,59.4,65.5,71.8
+intelligence,AutomationBench-AA,"US$ per task, log scale",Sonnet 5.5,cost_usd,0.241,0.262,0.313,0.422,1.03
+intelligence,AA-LCR,% long-context reasoning · Artificial Analysis,GPT-6 Astra,score,80.0,79.7,80.0,80.0,80.7
+intelligence,AA-LCR,"US$ per task, log scale",GPT-6 Astra,cost_usd,0.95,0.953,0.96,0.97,0.997
+intelligence,AA-LCR,% long-context reasoning · Artificial Analysis,GPT-6.1 Sol,score,84.0,83.3,82.3,79.7,83.0
+intelligence,AA-LCR,"US$ per task, log scale",GPT-6.1 Sol,cost_usd,0.19,0.19,0.191,0.193,0.199
+intelligence,AA-LCR,% long-context reasoning · Artificial Analysis,Fable 5.1,score,82.3,84.7,83.7,83.0,85.3
+intelligence,AA-LCR,"US$ per task, log scale",Fable 5.1,cost_usd,1.47,1.48,1.48,1.51,1.58
+intelligence,AA-LCR,% long-context reasoning · Artificial Analysis,Opus 5.5,score,80.7,84.3,82.7,84.7,84.7
+intelligence,AA-LCR,"US$ per task, log scale",Opus 5.5,cost_usd,0.587,0.59,0.592,0.599,0.677
+intelligence,AA-LCR,% long-context reasoning · Artificial Analysis,Sonnet 5.5,score,76.0,76.3,78.0,79.7,82.7
+intelligence,AA-LCR,"US$ per task, log scale",Sonnet 5.5,cost_usd,0.291,0.292,0.294,0.297,0.339
+intelligence,GDP.pdf,% all-pass · Q&A over complex PDFs · Artificial Analysis,GPT-6 Astra,score,30.4,30.4,31.0,32.2,31.0
+intelligence,GDP.pdf,"US$ per task, log scale",GPT-6 Astra,cost_usd,1.7,1.72,1.79,1.91,2.08
+intelligence,GDP.pdf,% all-pass · Q&A over complex PDFs · Artificial Analysis,GPT-6.1 Sol,score,27.0,30.0,32.0,31.8,31.0
+intelligence,GDP.pdf,"US$ per task, log scale",GPT-6.1 Sol,cost_usd,0.334,0.337,0.349,0.368,0.42
+intelligence,GDP.pdf,% all-pass · Q&A over complex PDFs · Artificial Analysis,Fable 5.1,score,28.0,26.8,26.8,26.2,26.2
+intelligence,GDP.pdf,"US$ per task, log scale",Fable 5.1,cost_usd,1.92,1.96,2.02,2.32,2.77
+intelligence,GDP.pdf,% all-pass · Q&A over complex PDFs · Artificial Analysis,Opus 5.5,score,25.6,25.6,28.8,26.6,26.2
+intelligence,GDP.pdf,"US$ per task, log scale",Opus 5.5,cost_usd,0.764,0.795,0.825,0.964,1.55
+intelligence,GDP.pdf,% all-pass · Q&A over complex PDFs · Artificial Analysis,Sonnet 5.5,score,16.0,20.2,25.2,24.6,25.8
+intelligence,GDP.pdf,"US$ per task, log scale",Sonnet 5.5,cost_usd,0.372,0.381,0.409,0.46,0.794
+coding,AA Index coding category,mean of TB 4.0 & SciCode · derived from AA,GPT-6 Astra,score,48.0,51.9,54.7,57.7,57.8
+coding,AA Index coding category,"US$ per task, log scale",GPT-6 Astra,cost_usd,1.15,2.24,2.06,2.99,4.37
+coding,AA Index coding category,mean of TB 4.0 & SciCode · derived from AA,GPT-6.1 Sol,score,42.0,50.6,53.6,54.9,55.2
+coding,AA Index coding category,"US$ per task, log scale",GPT-6.1 Sol,cost_usd,0.196,0.312,0.421,0.524,0.933
+coding,AA Index coding category,mean of TB 4.0 & SciCode · derived from AA,Fable 5.1,score,48.5,50.6,55.4,58.0,57.5
+coding,AA Index coding category,"US$ per task, log scale",Fable 5.1,cost_usd,3.7,4.6,5.86,8.01,9.94
+coding,AA Index coding category,mean of TB 4.0 & SciCode · derived from AA,Opus 5.5,score,45.0,55.9,58.5,62.3,63.2
+coding,AA Index coding category,"US$ per task, log scale",Opus 5.5,cost_usd,1.05,2.04,2.58,4.42,6.79
+coding,AA Index coding category,mean of TB 4.0 & SciCode · derived from AA,Sonnet 5.5,score,34.9,41.4,48.8,57.2,62.3
+coding,AA Index coding category,"US$ per task, log scale",Sonnet 5.5,cost_usd,0.649,0.796,1.1,3.05,6.46
+coding,Terminal-Bench 4.0,% · Artificial Analysis,GPT-6 Astra,score,41.9,49.5,54.0,59.6,59.1
+coding,Terminal-Bench 4.0,"US$ per task, log scale",GPT-6 Astra,cost_usd,2.25,4.43,4.05,5.86,8.5
+coding,Terminal-Bench 4.0,% · Artificial Analysis,GPT-6.1 Sol,score,30.8,48.0,51.5,54.0,56.1
+coding,Terminal-Bench 4.0,"US$ per task, log scale",GPT-6.1 Sol,cost_usd,0.383,0.614,0.828,1.03,1.82
+coding,Terminal-Bench 4.0,% · Artificial Analysis,Fable 5.1,score,40.4,44.9,52.0,55.1,52.0
+coding,Terminal-Bench 4.0,"US$ per task, log scale",Fable 5.1,cost_usd,7.32,9.12,11.6,15.8,19.2
+coding,Terminal-Bench 4.0,% · Artificial Analysis,Opus 5.5,score,31.3,52.5,56.6,59.6,59.6
+coding,Terminal-Bench 4.0,"US$ per task, log scale",Opus 5.5,cost_usd,2.08,4.04,5.12,8.78,13.1
+coding,Terminal-Bench 4.0,% · Artificial Analysis,Sonnet 5.5,score,20.7,29.8,43.9,57.1,63.6
+coding,Terminal-Bench 4.0,"US$ per task, log scale",Sonnet 5.5,cost_usd,1.28,1.58,2.19,6.08,12.6
+coding,Terminal-Bench 2.1,% · Artificial Analysis,GPT-6 Astra,score,88.0,89.5,89.9,89.1,88.4
+coding,Terminal-Bench 2.1,% · Artificial Analysis,Fable 5.1,score,85.0,88.0,89.9,91.0,91.4
+coding,DeepSWE v1.1,% · reported by OpenAI,GPT-6 Astra,score,67.0,72.8,73.2,74.1,73.2
+coding,DeepSWE v1.1,% · reported by OpenAI,GPT-6.1 Sol,score,64.4,73.0,75.2,71.9,71.9
+coding,FrontierCode 1.1 Main,score · Cognition leaderboard,GPT-6 Astra,score,45.3,48.8,50.9,50.6,53.3
+coding,FrontierCode 1.1 Main,score · Cognition leaderboard,GPT-6.1 Sol,score,45.5,50.2,48.0,49.3,47.6
+coding,FrontierCode 1.1 Main,score · Cognition leaderboard,Fable 5.1,score,49.8,50.9,50.3,48.7,50.3
+coding,FrontierCode 1.1 Main,score · Cognition leaderboard,Opus 5.5,score,47.3,54.6,54.0,51.4,54.4
+coding,FrontierCode 1.1 Main,score · Cognition leaderboard,Sonnet 5.5,score,29.3,36.5,49.4,52.1,46.2
+coding,CursorBench 4.0,% · Cursor leaderboard,Fable 5.1,score,45.1,46.8,49.2,51.6,51.8
+coding,CursorBench 4.0,% · Cursor leaderboard,Opus 5.5,score,43.7,52.5,56.0,56.0,57.8
+coding,CursorBench 4.0,% · Cursor leaderboard,Sonnet 5.5,score,35.8,39.2,47.8,53.1,55.5
+coding,SciCode,% · Artificial Analysis,GPT-6 Astra,score,54.1,54.2,55.4,55.7,56.5
+coding,SciCode,"US$ per task, log scale",GPT-6 Astra,cost_usd,0.0425,0.0509,0.0696,0.122,0.232
+coding,SciCode,% · Artificial Analysis,GPT-6.1 Sol,score,53.2,53.2,55.8,55.7,54.2
+coding,SciCode,"US$ per task, log scale",GPT-6.1 Sol,cost_usd,0.00842,0.00931,0.013,0.022,0.0434
+coding,SciCode,% · Artificial Analysis,Fable 5.1,score,56.7,56.4,58.7,60.9,63.1
+coding,SciCode,"US$ per task, log scale",Fable 5.1,cost_usd,0.069,0.0756,0.0891,0.241,0.659
+coding,SciCode,% · Artificial Analysis,Opus 5.5,score,58.6,59.3,60.4,65.0,66.9
+coding,SciCode,"US$ per task, log scale",Opus 5.5,cost_usd,0.0264,0.0355,0.0402,0.0676,0.469
+coding,SciCode,% · Artificial Analysis,Sonnet 5.5,score,49.1,52.9,53.7,57.3,61.0
+coding,SciCode,"US$ per task, log scale",Sonnet 5.5,cost_usd,0.0129,0.0135,0.016,0.0237,0.278

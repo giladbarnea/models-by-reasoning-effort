@@ -30,7 +30,7 @@ from matplotlib.path import Path as MatplotlibPath
 from matplotlib.text import Annotation, Text
 from matplotlib.transforms import Bbox
 
-OUTPUT_DIRECTORY = Path(__file__).parent / "out"
+OUTPUT_DIRECTORY = Path(__file__).parent / "docs"  # GitHub Pages serves this folder
 
 
 @dataclass(frozen=True)
@@ -1189,7 +1189,7 @@ def write_table(path: Path) -> None:
 def main() -> None:
     configure_fonts()
     OUTPUT_DIRECTORY.mkdir(exist_ok=True)
-    (OUTPUT_DIRECTORY / "models-by-reasoning-effort.html").write_text(page_html())
+    (OUTPUT_DIRECTORY / "index.html").write_text(page_html())
     write_table(OUTPUT_DIRECTORY / "data.csv")
 
 
